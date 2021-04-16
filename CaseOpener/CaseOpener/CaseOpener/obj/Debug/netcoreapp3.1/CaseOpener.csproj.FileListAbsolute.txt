@@ -1,0 +1,15 @@
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.Form1.resources
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csproj.GenerateResource.cache
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.AssemblyInfoInputs.cache
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.AssemblyInfo.cs
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netcoreapp3.1\CaseOpener.exe
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netcoreapp3.1\CaseOpener.deps.json
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netcoreapp3.1\CaseOpener.runtimeconfig.json
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netcoreapp3.1\CaseOpener.runtimeconfig.dev.json
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netcoreapp3.1\CaseOpener.dll
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netcoreapp3.1\CaseOpener.pdb
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.dll
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.pdb
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.genruntimeconfig.cache

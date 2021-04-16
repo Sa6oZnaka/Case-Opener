@@ -5,19 +5,16 @@ using System.Text;
 
 namespace CaseOpener
 {
-    class GameItemCollection
+    static class GameItemCollection
     {
 
-        public enum Items
+
+        public static Case regullarCase = new Case("Regular case", null, Color.Orange, new List<GameItem>
         {
-            DRAGON_LORE = new GameItem("Dragon Lore", null, Color.White, 0),
-
-
-
-
-
-        }
-
+            new GameItem("AWP | Asiimov", null, Color.Red, RarityEnum.Rarity.COVERT),
+            new GameItem("AUG | Chameleon", null, Color.Red, RarityEnum.Rarity.COVERT),
+            new GameItem("AK-47 | Redline", null, Color.Pink, RarityEnum.Rarity.CLASSIFIED),
+        });
 
     }
 }

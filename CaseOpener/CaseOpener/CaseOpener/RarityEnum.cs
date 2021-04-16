@@ -10,12 +10,12 @@ namespace CaseOpener
         public enum Rarity
         {
             CONSUMER_GRADE = 0,
-            INDUSTRIAL_GRADE,
-            MIL_SPEC,
-            RESTRICTED,
-            CLASSIFIED,
-            COVERT,
-            EXCEEDINGLY_RARE
+            INDUSTRIAL_GRADE = 1,
+            MIL_SPEC = 2,
+            RESTRICTED = 3,
+            CLASSIFIED = 4,
+            COVERT = 5,
+            EXCEEDINGLY_RARE = 6
         }
     }
 }

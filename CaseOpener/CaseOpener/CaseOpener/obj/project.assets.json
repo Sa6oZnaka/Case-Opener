@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex\\Desktop\\CaseOpener\\CaseOpener\\CaseOpener\\CaseOpener.csproj",
+      "projectUniqueName": "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\CaseOpener\\CaseOpener.csproj",
       "projectName": "CaseOpener",
-      "projectPath": "C:\\Users\\Alex\\Desktop\\CaseOpener\\CaseOpener\\CaseOpener\\CaseOpener.csproj",
+      "projectPath": "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\CaseOpener\\CaseOpener.csproj",
       "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex\\Desktop\\CaseOpener\\CaseOpener\\CaseOpener\\obj\\",
+      "outputPath": "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\CaseOpener\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

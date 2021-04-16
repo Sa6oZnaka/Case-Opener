@@ -16,6 +16,7 @@ namespace CaseOpener
             _name = name;
             _image = image;
             _colorFrame = color;
+
         }
     }
 }

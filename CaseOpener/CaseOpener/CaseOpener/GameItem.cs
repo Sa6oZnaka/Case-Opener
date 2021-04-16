@@ -9,9 +9,20 @@ namespace CaseOpener
     {
 
         private float? _wear;
-        int _rarity; 
+        RarityEnum.Rarity _rarity;
 
-        public GameItem(string name, Image image, Color color, int rarity) : base(name, image, color)
+        public RarityEnum.Rarity Rarity { 
+            get {
+                return _rarity;
+            }
+            set
+            {
+                _rarity = value;
+            } 
+        }
+
+
+        public GameItem(string name, Image image, Color color, RarityEnum.Rarity rarity) : base(name, image, color)
         {
             _rarity = rarity;
             _wear = null;
