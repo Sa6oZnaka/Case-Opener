@@ -28,7 +28,7 @@ namespace CaseOpener
             _wear = null;
         }
 
-        private void generateWear()
+        public void generateWear()
         {
             if (_wear != null)
                 return;

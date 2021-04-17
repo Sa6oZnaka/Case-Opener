@@ -14,6 +14,7 @@ namespace CaseOpener
             new GameItem("AWP | Asiimov", null, Color.Red, RarityEnum.Rarity.COVERT),
             new GameItem("AUG | Chameleon", null, Color.Red, RarityEnum.Rarity.COVERT),
             new GameItem("AK-47 | Redline", null, Color.Pink, RarityEnum.Rarity.CLASSIFIED),
+            // TODO add more items
         });
 
     }
