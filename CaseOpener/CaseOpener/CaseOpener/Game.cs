@@ -58,6 +58,14 @@ namespace CaseOpener
             _tradeOffers.Remove(offer);
         }
 
+        void compleateTradeup(int userID, TradeUp tradeup)
+        {
+            foreach(Item item in tradeup.Items)
+            {
+                _users[userID].removeItem((Item)_users[userID].Inventory.Select(i => i.ID = item.ID));
+            }
+            _users[userID].addItem(tradeup.Compleate());
+        }
 
     }
 }

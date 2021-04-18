@@ -10,7 +10,7 @@ namespace CaseOpener
         int _userID;
         float _balance;
         List<Item> _inventory;
-
+        List<int> _friendList; // contains user Ids 
         public int UserID { 
             get
             {
@@ -19,7 +19,15 @@ namespace CaseOpener
             set
             {
                 _userID = value;
-            } 
+            }
+        }
+
+        public List<Item> Inventory
+        {
+            get
+            {
+                return _inventory;
+            }
         }
 
         public User(int id)
@@ -27,6 +35,7 @@ namespace CaseOpener
             _userID = id;
             _balance = 0;
             _inventory = new List<Item>();
+            _friendList = new List<int>();
         }
 
         public float addBalance(float amount)
