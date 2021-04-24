@@ -16,6 +16,12 @@ namespace CaseOpener
             _items = gameItems;
         }
 
+        public override void generateWear()
+        {
+            // todo
+            throw new NotImplementedException();
+        }
+
         private GameItem open()
         {
             int maxQuality = (int)_items.OrderByDescending(t => t.Rarity).First().Rarity;

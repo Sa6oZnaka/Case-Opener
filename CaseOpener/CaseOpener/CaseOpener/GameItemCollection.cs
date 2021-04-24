@@ -5,8 +5,19 @@ using System.Text;
 
 namespace CaseOpener
 {
+
+    //public delegate void GetItemCollection(GameItem item);
+
+
     static class GameItemCollection
     {
+
+        public static GameItem GetCollection(GameItem item)
+        {
+            //Delegate del = 
+            return null;
+        }
+
 
         public static List<GameItem> ItemCollection = new List<GameItem>
         {
