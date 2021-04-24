@@ -22,7 +22,7 @@ namespace CaseOpener
             throw new NotImplementedException();
         }
 
-        private GameItem open()
+        public GameItem open()
         {
             int maxQuality = (int)_items.OrderByDescending(t => t.Rarity).First().Rarity;
             int minQuality = (int)_items.OrderBy(t => t.Rarity).First().Rarity;
@@ -47,8 +47,11 @@ namespace CaseOpener
                 quality--;
             }
 
-            List<GameItem> availableOptions = (List<GameItem>)_items
-                .Select(i => i.Rarity = (RarityEnum.Rarity)quality);
+
+            //List<GameItem> availableOptions = (List<GameItem>)_items
+            //    .Select(i => i.Rarity = (RarityEnum.Rarity)quality);
+
+            List<GameItem> availableOptions = _items;
 
             int itemId = rnd.Next(1, availableOptions.Count);
             GameItem item = availableOptions[itemId];

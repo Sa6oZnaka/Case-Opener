@@ -31,7 +31,7 @@ namespace CaseOpener
             int itemID = rnd.Next(1, 10);
 
             GameItem selectedItem = _items[itemID];
-            List<GameItem> outputs = (List<GameItem>)GameItemCollection.ItemCollection.Select(i => i.Rarity = selectedItem.Rarity + 1);
+            List<GameItem> outputs = (List<GameItem>)ItemFactory.ItemCollection.Select(i => i.Rarity = selectedItem.Rarity + 1);
 
             if (outputs.Count == 0)
                 return null;

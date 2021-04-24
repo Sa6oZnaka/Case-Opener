@@ -12,37 +12,53 @@ namespace CaseOpener
         List<Offer> _tradeOffers;
 
 
-        Game()
+        public Game()
         {
             _users = new List<User>();
             _tradeOffers = new List<Offer>();
         }
-        void addUser()
+        public void addUser(string name)
         {
-            _users.Add(new User(_users.Count));
+            _users.Add(new User(_users.Count, name));
         }
         
-        List<Offer> getOffers(int userID)
+        public void addItem(int userID, Item item)
+        {
+            _users[userID].addItem(item);
+        }
+
+        public bool removeItem(int userID, Item item)
+        {
+            return _users[userID].removeItem(item);
+        }
+
+
+        public List<Item> getUserItems(int id)
+        {
+            return _users[id].Inventory;
+        }
+
+        public List<Offer> getOffers(int userID)
         {
             return (List<Offer>)_tradeOffers.Select(t => t.ReceaverID == userID);
         }
 
-        List<Offer> getMyOffers(int userID)
+        public List<Offer> getMyOffers(int userID)
         {
             return (List<Offer>)_tradeOffers.Select(t => t.SenderID == userID);
         }
 
-        bool removeOffer(Offer offer)
+        public bool removeOffer(Offer offer)
         {
             return _tradeOffers.Remove(offer);
         }
 
-        void addOffer(int sender, int receaver, List<Item> toSend, List<Item> toReceave)
+        public void addOffer(int sender, int receaver, List<Item> toSend, List<Item> toReceave)
         {
             _tradeOffers.Add(new Offer(sender, receaver, toSend, toReceave));
         }
 
-        void acceptOffer(Offer offer)
+        public void acceptOffer(Offer offer)
         {
             User sender = (User)_users.Select(u => u.UserID = offer.SenderID);
             User receaver = (User)_users.Select(u => u.UserID = offer.ReceaverID);
@@ -58,7 +74,7 @@ namespace CaseOpener
             _tradeOffers.Remove(offer);
         }
 
-        void compleateTradeup(int userID, TradeUp tradeup)
+        public void compleateTradeup(int userID, TradeUp tradeup)
         {
             foreach(Item item in tradeup.Items)
             {

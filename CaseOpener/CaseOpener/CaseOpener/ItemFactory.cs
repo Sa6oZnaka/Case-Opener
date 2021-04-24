@@ -9,7 +9,7 @@ namespace CaseOpener
     //public delegate void GetItemCollection(GameItem item);
 
 
-    static class GameItemCollection
+    static class ItemFactory
     {
 
         public static GameItem GetCollection(GameItem item)

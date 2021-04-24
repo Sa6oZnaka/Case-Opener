@@ -7,10 +7,11 @@ namespace CaseOpener
     class User
     {
 
-        int _userID;
-        float _balance;
-        List<Item> _inventory;
-        List<int> _friendList; // contains user Ids 
+        private string _name;
+        private int _userID;
+        private float _balance;
+        private List<Item> _inventory;
+        private List<int> _friendList; // contains user Ids 
         public int UserID { 
             get
             {
@@ -30,8 +31,9 @@ namespace CaseOpener
             }
         }
 
-        public User(int id)
+        public User(int id, string name)
         {
+            _name = name;
             _userID = id;
             _balance = 0;
             _inventory = new List<Item>();

@@ -35,10 +35,10 @@ namespace CaseOpener
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.listBoxItems = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,6 +74,7 @@ namespace CaseOpener
             this.button2.TabIndex = 3;
             this.button2.Text = "Buy Case";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -108,9 +109,19 @@ namespace CaseOpener
             this.panel2.Size = new System.Drawing.Size(800, 22);
             this.panel2.TabIndex = 6;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.Location = new System.Drawing.Point(744, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Balance:";
+            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.listBox1);
+            this.panel3.Controls.Add(this.listBoxItems);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 68);
@@ -118,6 +129,17 @@ namespace CaseOpener
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(800, 382);
             this.panel3.TabIndex = 7;
+            // 
+            // listBoxItems
+            // 
+            this.listBoxItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxItems.FormattingEnabled = true;
+            this.listBoxItems.ItemHeight = 15;
+            this.listBoxItems.Location = new System.Drawing.Point(10, 29);
+            this.listBoxItems.Name = "listBoxItems";
+            this.listBoxItems.Size = new System.Drawing.Size(780, 343);
+            this.listBoxItems.TabIndex = 1;
+            this.listBoxItems.DoubleClick += new System.EventHandler(this.listBoxItems_DoubleClick);
             // 
             // label2
             // 
@@ -129,26 +151,6 @@ namespace CaseOpener
             this.label2.Size = new System.Drawing.Size(40, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Items";
-            // 
-            // listBox1
-            // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(10, 29);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(780, 343);
-            this.listBox1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Location = new System.Drawing.Point(744, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Balance:";
             // 
             // Form1
             // 
@@ -180,7 +182,7 @@ namespace CaseOpener
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxItems;
     }
 }
 
