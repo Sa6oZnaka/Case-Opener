@@ -8,10 +8,10 @@ namespace CaseOpener
     class GameItem : Item
     {
 
-        private float? _wear;
+        private double? _wear;
         RarityEnum.Rarity _rarity;
 
-        public float? Wear {
+        public double? Wear {
             get
             {
                 return _wear;
@@ -39,12 +39,15 @@ namespace CaseOpener
             _wear = generateWear(minWear, maxWear);
         }
 
-        override
-        public float generateWear(float minWear, float maxWear)
+        public double generateWear(double minWear, double maxWear)
         {
             Random random = new Random();
-            return minWear + (float)random.Next(0, 1000000000) / 1000000000 * maxWear;
+            return minWear + random.NextDouble() * maxWear;
         }
 
+        public override string ToString()
+        {
+            return this.Name + " ; " + this.Wear;
+        }
     }
 }

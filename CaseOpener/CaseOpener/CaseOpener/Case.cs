@@ -16,11 +16,6 @@ namespace CaseOpener
             _items = gameItems;
         }
 
-        public override float generateWear(float minWear, float maxWear)
-        {
-            throw new NotImplementedException();
-        }
-
         public GameItem open()
         {
             int maxQuality = (int)_items.OrderByDescending(t => t.Rarity).First().Rarity;
@@ -58,5 +53,9 @@ namespace CaseOpener
             return item;
         }
 
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace CaseOpener
 {
     public partial class FormGameItem : Form
     {
-        public FormGameItem(string name, float wear)
+        public FormGameItem(string name, double wear)
         {
             InitializeComponent();
 

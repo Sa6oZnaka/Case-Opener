@@ -44,6 +44,6 @@ namespace CaseOpener
             _colorFrame = color;
         }
 
-        public abstract float generateWear(float minWear, float maxWear);
+        public abstract override string ToString();
     }
 }
