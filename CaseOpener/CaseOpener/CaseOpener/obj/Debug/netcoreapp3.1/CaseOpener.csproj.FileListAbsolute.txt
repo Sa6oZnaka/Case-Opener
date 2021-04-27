@@ -13,3 +13,5 @@ C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netc
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.dll
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.pdb
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.genruntimeconfig.cache
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.FormGameItem.resources
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.Properties.Resources.resources

@@ -21,9 +21,9 @@ namespace CaseOpener
 
         public static List<GameItem> ItemCollection = new List<GameItem>
         {
-            new GameItem("AWP | Asiimov", null, Color.Red, RarityEnum.Rarity.COVERT),
-            new GameItem("AUG | Chameleon", null, Color.Red, RarityEnum.Rarity.COVERT),
-            new GameItem("AK-47 | Redline", null, Color.Pink, RarityEnum.Rarity.CLASSIFIED),
+            new GameItem("AWP | Asiimov", null, Color.Red, RarityEnum.Rarity.COVERT, 0, 1),
+            new GameItem("AUG | Chameleon", null, Color.Red, RarityEnum.Rarity.COVERT, 0, 1),
+            new GameItem("AK-47 | Redline", null, Color.Pink, RarityEnum.Rarity.CLASSIFIED, 0, 1),
             // TODO add more items
         };
 

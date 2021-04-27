@@ -11,6 +11,17 @@ namespace CaseOpener
         private float? _wear;
         RarityEnum.Rarity _rarity;
 
+        public float? Wear {
+            get
+            {
+                return _wear;
+            }
+            set
+            {
+              
+            }
+        }
+
         public RarityEnum.Rarity Rarity { 
             get {
                 return _rarity;
@@ -22,20 +33,17 @@ namespace CaseOpener
         }
 
 
-        public GameItem(string name, Image image, Color color, RarityEnum.Rarity rarity) : base(name, image, color)
+        public GameItem(string name, Image image, Color color, RarityEnum.Rarity rarity, float minWear, float maxWear) : base(name, image, color)
         {
             _rarity = rarity;
-            _wear = null;
+            _wear = generateWear(minWear, maxWear);
         }
 
         override
-        public void generateWear()
+        public float generateWear(float minWear, float maxWear)
         {
-            if (_wear != null)
-                return;
-
             Random random = new Random();
-            _wear = random.Next(0, 1);
+            return minWear + (float)random.Next(0, 1000000000) / 1000000000 * maxWear;
         }
 
     }

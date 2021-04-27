@@ -61,31 +61,51 @@ namespace CaseOpener
                 return;
             }
 
-            Case c = null;
+            if (listBoxItems.SelectedItem.GetType().Name == "Case")
+            {
+                Case c = null;
+                try
+                {
+                    c = (Case)listBoxItems.SelectedItem;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Generic Exception Handler: {e}");
+                    MessageBox.Show("Please select case!");
+                    return;
+                }
 
-            try
+                if (MessageBox.Show(
+                    "Are you sure?",
+                    "Confirm open",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Warning) == DialogResult.OK)
+
+                    if (_game.removeItem(_userID, c))
+                    {
+
+                        GameItem item = c.open();
+                        _game.addItem(_userID, item);
+                        RefreshListBoxItems();
+                        new FormGameItem(item.Name, item.Wear.Value).ShowDialog();
+                    }
+            }else if(listBoxItems.SelectedItem.GetType().Name == "GameItem")
             {
-                c = (Case)listBoxItems.SelectedItem;
-            } catch (Exception e)
-            {
-                Console.WriteLine($"Generic Exception Handler: {e}");
-                MessageBox.Show("Please select case!");
-                return;
+
+                GameItem selectedItem = (GameItem)listBoxItems.SelectedItem;
+
+                var fp = new FormGameItem(selectedItem.Name, selectedItem.Wear.Value);
+
+                if (fp.ShowDialog() == DialogResult.OK)
+                {
+                    _game.removeItem(_userID, selectedItem);
+
+                }
+                RefreshListBoxItems();
+
+
             }
-
-            if (MessageBox.Show(
-                "Are you sure?",
-                "Confirm delete",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Warning) == DialogResult.OK)
             
-                if(_game.removeItem(_userID, c))
-                
-                    _game.addItem(_userID, c.open());
-                
-            
-            RefreshListBoxItems();
-
         }
 
     }

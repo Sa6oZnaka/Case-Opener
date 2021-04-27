@@ -13,6 +13,19 @@ namespace CaseOpener
         private Image _image;
         private Color _colorFrame;
 
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+
+            }
+        }
+
+
         public int ID { 
             get
             {
@@ -29,9 +42,8 @@ namespace CaseOpener
             _name = name;
             _image = image;
             _colorFrame = color;
-
         }
 
-        public abstract void generateWear();
+        public abstract float generateWear(float minWear, float maxWear);
     }
 }

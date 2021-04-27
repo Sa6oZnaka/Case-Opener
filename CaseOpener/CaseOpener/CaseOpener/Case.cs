@@ -16,9 +16,8 @@ namespace CaseOpener
             _items = gameItems;
         }
 
-        public override void generateWear()
+        public override float generateWear(float minWear, float maxWear)
         {
-            // todo
             throw new NotImplementedException();
         }
 
@@ -55,7 +54,6 @@ namespace CaseOpener
 
             int itemId = rnd.Next(1, availableOptions.Count);
             GameItem item = availableOptions[itemId];
-            item.generateWear();
 
             return item;
         }
