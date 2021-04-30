@@ -20,7 +20,7 @@ namespace CaseOpener
 
         public GameItem open()
         {
-            /*int maxQuality = (int)_items.OrderByDescending(t => t.Rarity).First().Rarity;
+            int maxQuality = (int)_items.OrderByDescending(t => t.Rarity).First().Rarity;
             int minQuality = (int)_items.OrderBy(t => t.Rarity).First().Rarity;
             int range = maxQuality - minQuality;
 
@@ -42,14 +42,10 @@ namespace CaseOpener
                 n *= 10;
                 quality--;
             }
-            */
 
-            //List<GameItem> availableOptions = (List<GameItem>)_items
-            //    .Select(i => i.Rarity = (RarityEnum.Rarity)quality);
+            List<GameItem> availableOptions = _items.FindAll(i => (int)i.Rarity == quality);
 
-            List<GameItem> availableOptions = _items;
-
-            int itemId = _random.Next(1, availableOptions.Count);
+            int itemId = _random.Next(0, availableOptions.Count);
             GameItem item = new GameItem(availableOptions[itemId]);
 
             return item;

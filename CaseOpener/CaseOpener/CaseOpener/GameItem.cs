@@ -52,7 +52,7 @@ namespace CaseOpener
         }
 
 
-        public GameItem(string name, Image image, Color color, RarityEnum.Rarity rarity, float minWear, float maxWear) : base(name, image, color)
+        public GameItem(string name, Image image, Color color, RarityEnum.Rarity rarity, double minWear, double maxWear) : base(name, image, color)
         {
             _rarity = rarity;
             _minWear = minWear;
@@ -62,7 +62,7 @@ namespace CaseOpener
 
         public GameItem(GameItem item) : base(item.Name, null, item.Color)
         {
-            _wear = item.MinWear + ItemFactory.GetRandomNumber() * item.MaxWear;
+            _wear = item.MinWear + ItemFactory.GetRandomNumber() * (item.MaxWear - item.MinWear);
         }
 
         public override string ToString()

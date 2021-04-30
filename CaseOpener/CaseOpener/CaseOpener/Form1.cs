@@ -34,6 +34,33 @@ namespace CaseOpener
             listBoxItems.Items.Clear();
             //listBoxItems.Items.AddRange(_phoneBook.Find(textBoxNameSearch.Text));
             listBoxItems.Items.AddRange(_game.getUserItems(0).ToArray());
+
+            listBoxItems.DrawMode = DrawMode.OwnerDrawVariable;
+            listBoxItems.DrawItem += new DrawItemEventHandler(listBoxItems_DrawItem);
+
+        }
+
+        void listBoxItems_DrawItem(object sender, DrawItemEventArgs e)
+
+        {
+
+            if (e.Index < 0)
+                return;
+
+            e.DrawBackground();
+            e.DrawFocusRectangle();
+
+            Color c = Color.Gray;
+
+            GameItem selectedItem = null;
+            if (listBoxItems.Items[e.Index].GetType().Name == "GameItem")
+            {
+                selectedItem = (GameItem)listBoxItems.Items[e.Index];
+                c = selectedItem.Color;
+            }
+
+            e.Graphics.DrawString(listBoxItems.Items[e.Index].ToString(), new Font(FontFamily.GenericSansSerif, 8, FontStyle.Bold), new SolidBrush(c), e.Bounds);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -87,7 +114,7 @@ namespace CaseOpener
                         GameItem item = c.open();
                         _game.addItem(_userID, item);
                         RefreshListBoxItems();
-                        new FormGameItem(item.Name, item.Wear.Value).ShowDialog();
+                        //new FormGameItem(item.Name, item.Wear.Value).ShowDialog();
                     }
             }else if(listBoxItems.SelectedItem.GetType().Name == "GameItem")
             {

@@ -138,6 +138,7 @@ namespace CaseOpener
             this.listBoxItems.Location = new System.Drawing.Point(10, 29);
             this.listBoxItems.Name = "listBoxItems";
             this.listBoxItems.Size = new System.Drawing.Size(780, 343);
+            this.listBoxItems.Sorted = true;
             this.listBoxItems.TabIndex = 1;
             this.listBoxItems.DoubleClick += new System.EventHandler(this.listBoxItems_DoubleClick);
             // 
