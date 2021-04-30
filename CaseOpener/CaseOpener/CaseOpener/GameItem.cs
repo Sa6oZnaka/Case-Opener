@@ -9,17 +9,36 @@ namespace CaseOpener
     {
 
         private double? _wear;
+        private double _minWear;
+        private double _maxWear;
+
         RarityEnum.Rarity _rarity;
+
+        public double? MinWear
+        {
+            get
+            {
+                return _minWear;
+            }
+            set{}
+        }
+
+        public double? MaxWear
+        {
+            get
+            {
+                return _maxWear;
+            }
+            set{}
+        }
+
 
         public double? Wear {
             get
             {
                 return _wear;
             }
-            set
-            {
-              
-            }
+            set{}
         }
 
         public RarityEnum.Rarity Rarity { 
@@ -36,13 +55,14 @@ namespace CaseOpener
         public GameItem(string name, Image image, Color color, RarityEnum.Rarity rarity, float minWear, float maxWear) : base(name, image, color)
         {
             _rarity = rarity;
-            _wear = generateWear(minWear, maxWear);
+            _minWear = minWear;
+            _maxWear = maxWear;
+            _wear = null;
         }
 
-        public double generateWear(double minWear, double maxWear)
+        public GameItem(GameItem item) : base(item.Name, null, item.Color)
         {
-            Random random = new Random();
-            return minWear + random.NextDouble() * maxWear;
+            _wear = item.MinWear + ItemFactory.GetRandomNumber() * item.MaxWear;
         }
 
         public override string ToString()

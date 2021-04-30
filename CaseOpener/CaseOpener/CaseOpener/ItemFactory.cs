@@ -12,6 +12,17 @@ namespace CaseOpener
     static class ItemFactory
     {
 
+        private static readonly Random getrandom = new Random();
+
+        public static double GetRandomNumber()
+        {
+            lock (getrandom) // synchronize
+            {
+                return getrandom.NextDouble();
+            }
+        }
+
+
         public static GameItem GetCollection(GameItem item)
         {
             //Delegate del = 

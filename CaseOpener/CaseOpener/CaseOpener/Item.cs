@@ -25,6 +25,18 @@ namespace CaseOpener
             }
         }
 
+        public Color Color
+        {
+            get
+            {
+                return _colorFrame;
+            }
+            set
+            {
+
+            }
+        }
+
 
         public int ID { 
             get
