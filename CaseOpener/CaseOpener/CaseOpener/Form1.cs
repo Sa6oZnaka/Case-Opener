@@ -125,7 +125,11 @@ namespace CaseOpener
 
                 if (fp.ShowDialog() == DialogResult.OK)
                 {
-                    _game.removeItem(_userID, selectedItem);
+                    if (Double.TryParse(fp.TextBoxPrice, out double result))
+                        _game.createListing(_userID, selectedItem, result);
+                    else
+                        MessageBox.Show("Incorect price!");
+
 
                 }
                 RefreshListBoxItems();
@@ -135,5 +139,9 @@ namespace CaseOpener
             
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var fp = new FormMarket().ShowDialog();
+        }
     }
 }

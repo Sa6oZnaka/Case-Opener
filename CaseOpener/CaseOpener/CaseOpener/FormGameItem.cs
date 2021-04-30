@@ -10,6 +10,15 @@ namespace CaseOpener
 {
     public partial class FormGameItem : Form
     {
+
+        public string TextBoxPrice { 
+            get
+            {
+                return textBoxPrice.Text;
+            }
+            set { } 
+        }
+
         public FormGameItem(string name, double wear)
         {
             InitializeComponent();
@@ -25,6 +34,11 @@ namespace CaseOpener
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrice_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -30,7 +30,7 @@ namespace CaseOpener
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonTrade = new System.Windows.Forms.Button();
             this.buttonSell = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@ namespace CaseOpener
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxPrice);
             this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.buttonTrade);
             this.panel1.Controls.Add(this.buttonSell);
@@ -54,13 +54,14 @@ namespace CaseOpener
             this.panel1.Size = new System.Drawing.Size(800, 26);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // textBoxPrice
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox1.Location = new System.Drawing.Point(555, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 23);
-            this.textBox1.TabIndex = 3;
+            this.textBoxPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxPrice.Location = new System.Drawing.Point(555, 0);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(170, 23);
+            this.textBoxPrice.TabIndex = 3;
+            this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
             // 
             // buttonDelete
             // 
@@ -86,6 +87,7 @@ namespace CaseOpener
             // 
             // buttonSell
             // 
+            this.buttonSell.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSell.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonSell.Location = new System.Drawing.Point(725, 0);
             this.buttonSell.Name = "buttonSell";
@@ -164,7 +166,7 @@ namespace CaseOpener
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonTrade;
         private System.Windows.Forms.Button buttonSell;

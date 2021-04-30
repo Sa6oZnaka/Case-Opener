@@ -10,12 +10,13 @@ namespace CaseOpener
 
         List<User> _users;
         List<Offer> _tradeOffers;
-
+        List<Listing> _listings;
 
         public Game()
         {
             _users = new List<User>();
             _tradeOffers = new List<Offer>();
+            _listings = new List<Listing>();
         }
         public void addUser(string name)
         {
@@ -32,6 +33,11 @@ namespace CaseOpener
             return _users[userID].removeItem(item);
         }
 
+        public void createListing(int userID, Item item, double price)
+        {
+            if(this.removeItem(userID, item))
+                _listings.Add(new Listing(userID, item, price));
+        }
 
         public List<Item> getUserItems(int id)
         {
