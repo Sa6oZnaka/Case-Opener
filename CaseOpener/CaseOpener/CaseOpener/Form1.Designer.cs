@@ -34,6 +34,7 @@ namespace CaseOpener
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonTradeup = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -89,6 +90,7 @@ namespace CaseOpener
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonTradeup);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
@@ -98,6 +100,17 @@ namespace CaseOpener
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(800, 46);
             this.panel1.TabIndex = 5;
+            // 
+            // buttonTradeup
+            // 
+            this.buttonTradeup.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonTradeup.Location = new System.Drawing.Point(155, 5);
+            this.buttonTradeup.Name = "buttonTradeup";
+            this.buttonTradeup.Size = new System.Drawing.Size(75, 36);
+            this.buttonTradeup.TabIndex = 5;
+            this.buttonTradeup.Text = "Tradeup";
+            this.buttonTradeup.UseVisualStyleBackColor = true;
+            this.buttonTradeup.Click += new System.EventHandler(this.buttonTradeup_Click);
             // 
             // panel2
             // 
@@ -138,6 +151,7 @@ namespace CaseOpener
             this.listBoxItems.ItemHeight = 15;
             this.listBoxItems.Location = new System.Drawing.Point(10, 29);
             this.listBoxItems.Name = "listBoxItems";
+            this.listBoxItems.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxItems.Size = new System.Drawing.Size(780, 343);
             this.listBoxItems.Sorted = true;
             this.listBoxItems.TabIndex = 1;
@@ -185,6 +199,7 @@ namespace CaseOpener
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBoxItems;
+        private System.Windows.Forms.Button buttonTradeup;
     }
 }
 

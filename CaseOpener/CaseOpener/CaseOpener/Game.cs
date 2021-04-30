@@ -84,7 +84,7 @@ namespace CaseOpener
         {
             foreach(Item item in tradeup.Items)
             {
-                _users[userID].removeItem((Item)_users[userID].Inventory.Select(i => i.ID = item.ID));
+                removeItem(userID, item);
             }
             _users[userID].addItem(tradeup.Compleate());
         }

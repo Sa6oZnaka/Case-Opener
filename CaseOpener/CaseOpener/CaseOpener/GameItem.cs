@@ -38,7 +38,10 @@ namespace CaseOpener
             {
                 return _wear;
             }
-            set{}
+            set
+            {
+                _wear = value;
+            }
         }
 
         public RarityEnum.Rarity Rarity { 
@@ -63,6 +66,7 @@ namespace CaseOpener
         public GameItem(GameItem item) : base(item.Name, null, item.Color)
         {
             _wear = item.MinWear + ItemFactory.GetRandomNumber() * (item.MaxWear - item.MinWear);
+            _rarity = item.Rarity;
         }
 
         public override string ToString()

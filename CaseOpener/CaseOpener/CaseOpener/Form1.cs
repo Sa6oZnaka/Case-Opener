@@ -143,5 +143,33 @@ namespace CaseOpener
         {
             var fp = new FormMarket().ShowDialog();
         }
+
+        private void buttonTradeup_Click(object sender, EventArgs e)
+        {
+            List<GameItem> selectedItems = new List<GameItem>();
+            foreach (var item in listBoxItems.SelectedItems)
+            {
+                if(item.GetType().Name == "GameItem")
+                    selectedItems.Add((GameItem)item);
+            }
+            if(selectedItems.Count == 10)
+            {
+                // check if the items are the same rarity
+                int rarity = (int)selectedItems[0].Rarity;
+                if(selectedItems.FindAll(i => (int)i.Rarity == rarity).Count() == 10)
+                {
+                    TradeUp trade = new TradeUp(selectedItems);
+                    _game.compleateTradeup(_userID, trade);
+
+                    RefreshListBoxItems();
+                }
+                else
+                    MessageBox.Show("Items need to be from the same rarity");
+
+            }
+            else
+                MessageBox.Show("Please select 10 items");
+
+        }
     }
 }
