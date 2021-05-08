@@ -143,6 +143,7 @@ namespace CaseOpener
         {
             var fp = new FormMarket();
             fp.Listings = _game.Listings;
+            fp.User = _game.getUser(_userID);
             var result = fp.ShowDialog();
             if (result == DialogResult.OK)
             {

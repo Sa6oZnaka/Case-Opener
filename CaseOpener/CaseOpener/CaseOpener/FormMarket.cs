@@ -11,6 +11,7 @@ namespace CaseOpener
     partial class FormMarket : Form
     {
         private List<Listing> _availableListings = new List<Listing>();
+        private User _user = null;
 
         public List<Listing> Listings {
             get
@@ -24,6 +25,18 @@ namespace CaseOpener
                 refreshListings();
             }
         }
+
+        public User User {
+            get
+            {
+                return _user;
+            }
+            set
+            {
+                _user = value;
+            } 
+        }
+
 
         public FormMarket()
         {
@@ -62,6 +75,8 @@ namespace CaseOpener
             int id = int.Parse(idString);
 
             Listing l = _availableListings.FindAll(l => l.ID == id)[0];
+
+            _user.addItem(l.Item);
 
             _availableListings.Remove(l);
 

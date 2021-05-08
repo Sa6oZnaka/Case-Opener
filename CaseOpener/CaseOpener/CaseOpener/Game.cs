@@ -32,6 +32,11 @@ namespace CaseOpener
             }
         }
 
+        public User getUser(int id)
+        {
+            return _users[id];
+        }
+
         public bool removeListing(Listing listing)
         {
             return _listings.Remove(listing);
