@@ -7,12 +7,23 @@ namespace CaseOpener
     class Listing
     {
 
+        private int _id;
         private int _userID;
         private Item _item;
         private double _price;
 
-        public Listing(int userID, Item item, double price)
+        public int ID
         {
+            get
+            {
+                return _id;
+            }
+            set { }
+        }
+
+        public Listing(int id, int userID, Item item, double price)
+        {
+            _id = id;
             _userID = userID;
             _item = item;
             _price = price;

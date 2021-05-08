@@ -8,16 +8,41 @@ namespace CaseOpener
     class Game
     {
 
-        List<User> _users;
-        List<Offer> _tradeOffers;
-        List<Listing> _listings;
+        private List<User> _users;
+        private List<Offer> _tradeOffers;
+        private List<Listing> _listings;
+        private int _listingID;
 
         public Game()
         {
+            _listingID = 0;
             _users = new List<User>();
             _tradeOffers = new List<Offer>();
             _listings = new List<Listing>();
         }
+
+        public List<Listing> Listings {
+            get
+            {
+                return _listings;
+            }
+            set
+            {
+                _listings = value;
+            }
+        }
+
+        public bool removeListing(Listing listing)
+        {
+            return _listings.Remove(listing);
+        }
+
+        public void buyListing(int userID, Listing listing)
+        {
+            //if (removeListing(listing))
+            //    addItem(userID, Listing.Item);
+        }
+
         public void addUser(string name)
         {
             _users.Add(new User(_users.Count, name));
@@ -35,8 +60,11 @@ namespace CaseOpener
 
         public void createListing(int userID, Item item, double price)
         {
-            if(this.removeItem(userID, item))
-                _listings.Add(new Listing(userID, item, price));
+            if (this.removeItem(userID, item))
+            {
+                _listings.Add(new Listing(_listingID, userID, item, price));
+                _listingID++;
+            }
         }
 
         public List<Item> getUserItems(int id)
