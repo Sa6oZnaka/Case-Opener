@@ -9,14 +9,31 @@ namespace CaseOpener
 
         private int _senderID;
         private int _receaverID;
+
+        private string _senderName;
+
         private int _status; // 0 = pending, 1 = accepted
 
-        public FriendRequest(int fromID, int toID)
+        public FriendRequest(int fromID, int toID, string senderName)
         {
             _senderID = fromID;
             _receaverID = toID;
 
+            _senderName = senderName;
+
             _status = 0;
+        }
+
+        public string Name 
+        {
+            get
+            {
+                return _senderName;
+            }
+            set
+            {
+                _senderName = value;
+            }
         }
 
         public int getSender()
@@ -37,6 +54,11 @@ namespace CaseOpener
         public int getStatus()
         {
             return _status;
+        }
+
+        public override string ToString()
+        {
+            return this._senderName;
         }
 
     }

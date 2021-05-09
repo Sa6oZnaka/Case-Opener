@@ -35,7 +35,6 @@ namespace CaseOpener
             this.textBoxUser = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonSent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +80,8 @@ namespace CaseOpener
             // 
             // buttonAdd
             // 
+            this.buttonAdd.AutoSize = true;
+            this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonAdd.Location = new System.Drawing.Point(709, 4);
             this.buttonAdd.Name = "buttonAdd";
@@ -92,7 +93,6 @@ namespace CaseOpener
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonSent);
             this.panel1.Controls.Add(this.textBoxUser);
             this.panel1.Controls.Add(this.buttonPending);
             this.panel1.Controls.Add(this.buttonAdd);
@@ -103,17 +103,6 @@ namespace CaseOpener
             this.panel1.Padding = new System.Windows.Forms.Padding(4);
             this.panel1.Size = new System.Drawing.Size(788, 30);
             this.panel1.TabIndex = 5;
-            // 
-            // buttonSent
-            // 
-            this.buttonSent.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonSent.Location = new System.Drawing.Point(154, 4);
-            this.buttonSent.Name = "buttonSent";
-            this.buttonSent.Size = new System.Drawing.Size(75, 22);
-            this.buttonSent.TabIndex = 5;
-            this.buttonSent.Text = "Sent";
-            this.buttonSent.UseVisualStyleBackColor = true;
-            this.buttonSent.Click += new System.EventHandler(this.buttonSent_Click);
             // 
             // FormFriends
             // 
@@ -139,6 +128,5 @@ namespace CaseOpener
         private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonSent;
     }
 }

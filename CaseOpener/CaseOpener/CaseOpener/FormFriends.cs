@@ -36,6 +36,18 @@ namespace CaseOpener
             }
         }
 
+        public string requestName 
+        {
+            get
+            {
+                return textBoxUser.Text;
+            }
+            set
+            {
+
+            }
+        }
+
         public FormFriends()
         {
             InitializeComponent();
@@ -48,13 +60,10 @@ namespace CaseOpener
             {
                 if (acceptedOnly && request.getStatus() == 1)
                     listBoxFriends.Items.Add(request);
-                else if (! acceptedOnly && request.getStatus() == 0)
+                else if (! acceptedOnly && request.getStatus() == 0 && request.getSender() != _userID)
                     listBoxFriends.Items.Add(request);
 
             }
-
-
-
         }
 
         private void button2_Click(object sender, EventArgs e) // button friends
@@ -69,8 +78,7 @@ namespace CaseOpener
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-
-            _friends.Add(new FriendRequest(_userID, int.Parse(textBoxUser.Text)));
+            
         }
 
         private void buttonSent_Click(object sender, EventArgs e)

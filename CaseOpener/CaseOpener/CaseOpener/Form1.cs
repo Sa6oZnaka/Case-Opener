@@ -188,7 +188,11 @@ namespace CaseOpener
         {
             var fp = new FormFriends();
             fp.Friends = _game.getUser(_userID).Friends;
-            fp.Show();
+            if(fp.ShowDialog() == DialogResult.OK)
+            {
+                if(! _game.addFriend(_userID, fp.requestName))
+                    MessageBox.Show("User not found!");
+            }
 
         }
     }
