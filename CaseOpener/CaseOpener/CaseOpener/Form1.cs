@@ -183,5 +183,12 @@ namespace CaseOpener
                 MessageBox.Show("Please select 10 items");
 
         }
+
+        private void buttonFriends_Click(object sender, EventArgs e)
+        {
+            var fp = new FormFriends();
+            fp.Show();
+
+        }
     }
 }

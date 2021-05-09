@@ -40,6 +40,7 @@ namespace CaseOpener
             this.panel3 = new System.Windows.Forms.Panel();
             this.listBoxItems = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonFriends = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -90,6 +91,7 @@ namespace CaseOpener
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonFriends);
             this.panel1.Controls.Add(this.buttonTradeup);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
@@ -168,6 +170,17 @@ namespace CaseOpener
             this.label2.TabIndex = 0;
             this.label2.Text = "Items";
             // 
+            // buttonFriends
+            // 
+            this.buttonFriends.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonFriends.Location = new System.Drawing.Point(230, 5);
+            this.buttonFriends.Name = "buttonFriends";
+            this.buttonFriends.Size = new System.Drawing.Size(75, 36);
+            this.buttonFriends.TabIndex = 6;
+            this.buttonFriends.Text = "Friends";
+            this.buttonFriends.UseVisualStyleBackColor = true;
+            this.buttonFriends.Click += new System.EventHandler(this.buttonFriends_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -200,6 +213,7 @@ namespace CaseOpener
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBoxItems;
         private System.Windows.Forms.Button buttonTradeup;
+        private System.Windows.Forms.Button buttonFriends;
     }
 }
 

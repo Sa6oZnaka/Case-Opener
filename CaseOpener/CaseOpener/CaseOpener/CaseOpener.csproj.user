@@ -4,6 +4,9 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormFriends.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormGameItem.cs">
       <SubType>Form</SubType>
     </Compile>
