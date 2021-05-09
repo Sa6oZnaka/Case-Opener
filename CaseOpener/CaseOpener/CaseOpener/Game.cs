@@ -37,6 +37,24 @@ namespace CaseOpener
             return _users[id];
         }
 
+        // id of sender
+        public void addFriend(int id, string name)
+        {
+            int receaverID = _users.Find(u => u.Name == name).UserID;
+            _users[id].Friends.Add(new FriendRequest(id, receaverID));
+        }
+        
+        private void acceptFriendRequest(FriendRequest request)
+        {
+            request.accept();
+        }
+
+        private void removeFriendRequest(FriendRequest request)
+        {
+            int senderID = request.getSender();
+            _users[senderID].Friends.Remove(request);
+        }
+
         public bool removeListing(Listing listing)
         {
             return _listings.Remove(listing);

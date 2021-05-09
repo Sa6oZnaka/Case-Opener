@@ -42,5 +42,10 @@ namespace CaseOpener
         {
 
         }
+
+        private void buttonSell_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

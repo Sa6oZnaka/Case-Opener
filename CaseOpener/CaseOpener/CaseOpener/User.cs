@@ -11,7 +11,30 @@ namespace CaseOpener
         private int _userID;
         private float _balance;
         private List<Item> _inventory;
-        private List<int> _friendList; // contains user Ids 
+        private List<FriendRequest> _friendList; // contains user Ids 
+
+        public List<FriendRequest> Friends {
+            get
+            {
+                return _friendList;
+            }
+            set
+            {
+                _friendList = value;
+            } 
+        }
+
+        public string Name {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+
         public int UserID { 
             get
             {
@@ -37,7 +60,7 @@ namespace CaseOpener
             _userID = id;
             _balance = 0;
             _inventory = new List<Item>();
-            _friendList = new List<int>();
+            _friendList = new List<FriendRequest>();
         }
 
         public float addBalance(float amount)

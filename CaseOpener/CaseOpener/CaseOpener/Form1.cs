@@ -187,6 +187,7 @@ namespace CaseOpener
         private void buttonFriends_Click(object sender, EventArgs e)
         {
             var fp = new FormFriends();
+            fp.Friends = _game.getUser(_userID).Friends;
             fp.Show();
 
         }

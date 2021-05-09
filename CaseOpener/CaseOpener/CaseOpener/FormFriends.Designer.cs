@@ -29,52 +29,55 @@ namespace CaseOpener
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBoxFriends = new System.Windows.Forms.ListBox();
+            this.buttonPending = new System.Windows.Forms.Button();
+            this.buttonFriends = new System.Windows.Forms.Button();
+            this.textBoxUser = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listBox1
+            // listBoxFriends
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(6, 36);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(788, 408);
-            this.listBox1.TabIndex = 0;
+            this.listBoxFriends.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxFriends.FormattingEnabled = true;
+            this.listBoxFriends.ItemHeight = 15;
+            this.listBoxFriends.Location = new System.Drawing.Point(6, 36);
+            this.listBoxFriends.Name = "listBoxFriends";
+            this.listBoxFriends.Size = new System.Drawing.Size(788, 408);
+            this.listBoxFriends.TabIndex = 0;
             // 
-            // button1
+            // buttonPending
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.Location = new System.Drawing.Point(79, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 22);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonPending.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonPending.Location = new System.Drawing.Point(79, 4);
+            this.buttonPending.Name = "buttonPending";
+            this.buttonPending.Size = new System.Drawing.Size(75, 22);
+            this.buttonPending.TabIndex = 1;
+            this.buttonPending.Text = "Pending";
+            this.buttonPending.UseVisualStyleBackColor = true;
+            this.buttonPending.Click += new System.EventHandler(this.buttonPending_Click);
             // 
-            // button2
+            // buttonFriends
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.Location = new System.Drawing.Point(4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 22);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonFriends.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonFriends.Location = new System.Drawing.Point(4, 4);
+            this.buttonFriends.Name = "buttonFriends";
+            this.buttonFriends.Size = new System.Drawing.Size(75, 22);
+            this.buttonFriends.TabIndex = 2;
+            this.buttonFriends.Text = "Friends";
+            this.buttonFriends.UseVisualStyleBackColor = true;
+            this.buttonFriends.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // textBoxUser
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox1.Location = new System.Drawing.Point(519, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 23);
-            this.textBox1.TabIndex = 3;
+            this.textBoxUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxUser.Location = new System.Drawing.Point(519, 4);
+            this.textBoxUser.Name = "textBoxUser";
+            this.textBoxUser.Size = new System.Drawing.Size(190, 23);
+            this.textBoxUser.TabIndex = 3;
             // 
             // buttonAdd
             // 
@@ -85,13 +88,15 @@ namespace CaseOpener
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonSent);
+            this.panel1.Controls.Add(this.textBoxUser);
+            this.panel1.Controls.Add(this.buttonPending);
             this.panel1.Controls.Add(this.buttonAdd);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonFriends);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
@@ -99,12 +104,23 @@ namespace CaseOpener
             this.panel1.Size = new System.Drawing.Size(788, 30);
             this.panel1.TabIndex = 5;
             // 
+            // buttonSent
+            // 
+            this.buttonSent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonSent.Location = new System.Drawing.Point(154, 4);
+            this.buttonSent.Name = "buttonSent";
+            this.buttonSent.Size = new System.Drawing.Size(75, 22);
+            this.buttonSent.TabIndex = 5;
+            this.buttonSent.Text = "Sent";
+            this.buttonSent.UseVisualStyleBackColor = true;
+            this.buttonSent.Click += new System.EventHandler(this.buttonSent_Click);
+            // 
             // FormFriends
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxFriends);
             this.Controls.Add(this.panel1);
             this.Name = "FormFriends";
             this.Padding = new System.Windows.Forms.Padding(6);
@@ -117,11 +133,12 @@ namespace CaseOpener
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox listBoxFriends;
+        private System.Windows.Forms.Button buttonPending;
+        private System.Windows.Forms.Button buttonFriends;
+        private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonSent;
     }
 }

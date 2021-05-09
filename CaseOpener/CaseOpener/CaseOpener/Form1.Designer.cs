@@ -34,13 +34,13 @@ namespace CaseOpener
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonFriends = new System.Windows.Forms.Button();
             this.buttonTradeup = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.listBoxItems = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonFriends = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -102,6 +102,17 @@ namespace CaseOpener
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(800, 46);
             this.panel1.TabIndex = 5;
+            // 
+            // buttonFriends
+            // 
+            this.buttonFriends.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonFriends.Location = new System.Drawing.Point(230, 5);
+            this.buttonFriends.Name = "buttonFriends";
+            this.buttonFriends.Size = new System.Drawing.Size(75, 36);
+            this.buttonFriends.TabIndex = 6;
+            this.buttonFriends.Text = "Friends";
+            this.buttonFriends.UseVisualStyleBackColor = true;
+            this.buttonFriends.Click += new System.EventHandler(this.buttonFriends_Click);
             // 
             // buttonTradeup
             // 
@@ -169,17 +180,6 @@ namespace CaseOpener
             this.label2.Size = new System.Drawing.Size(40, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Items";
-            // 
-            // buttonFriends
-            // 
-            this.buttonFriends.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonFriends.Location = new System.Drawing.Point(230, 5);
-            this.buttonFriends.Name = "buttonFriends";
-            this.buttonFriends.Size = new System.Drawing.Size(75, 36);
-            this.buttonFriends.TabIndex = 6;
-            this.buttonFriends.Text = "Friends";
-            this.buttonFriends.UseVisualStyleBackColor = true;
-            this.buttonFriends.Click += new System.EventHandler(this.buttonFriends_Click);
             // 
             // Form1
             // 

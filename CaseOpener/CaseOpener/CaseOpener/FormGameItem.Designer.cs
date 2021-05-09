@@ -95,6 +95,7 @@ namespace CaseOpener
             this.buttonSell.TabIndex = 0;
             this.buttonSell.Text = "Sell";
             this.buttonSell.UseVisualStyleBackColor = true;
+            this.buttonSell.Click += new System.EventHandler(this.buttonSell_Click);
             // 
             // labelWear
             // 
