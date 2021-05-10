@@ -19,9 +19,11 @@ namespace CaseOpener
         public Form1()
         {
             _game.addUser("test");
-
+            
 
             InitializeComponent();
+
+            login();
         }
 
         private void ItemChange()
@@ -194,6 +196,64 @@ namespace CaseOpener
                     MessageBox.Show("User not found!");
             }
 
+        }
+
+        private bool displayLoginForm()
+        {
+            var fp = new FormLogin();
+            //fp.Friends = _game.getUser(_userID).Friends;
+
+            var dialogResult = fp.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                User user = _game.getUser(fp.Name);
+                if (user == null)
+                {
+                    MessageBox.Show("User not found!");
+                    return false;
+                }
+                else
+                {
+                    getUserDetails(user);
+                    return true;
+                }
+            }
+            else
+            {
+                // check if user exists
+                User user = _game.getUser(fp.Name);
+                if (user == null)
+                {
+                    _game.addUser(fp.Name);
+                    getUserDetails(_game.getUser(fp.Name));
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("User already exist!");
+                    return false;
+                }
+            }
+            
+        }
+
+        private void getUserDetails(User user)
+        {
+            _userID = user.UserID;
+            labelName.Text += user.Name;
+        }
+
+        private void login()
+        {
+            while (!displayLoginForm());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // todo fix
+            InitializeComponent();
+
+            login();
         }
     }
 }

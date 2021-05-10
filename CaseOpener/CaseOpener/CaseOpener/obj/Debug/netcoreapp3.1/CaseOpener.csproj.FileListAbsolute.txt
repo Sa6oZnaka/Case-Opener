@@ -17,3 +17,4 @@ C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netc
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.Properties.Resources.resources
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.FormMarket.resources
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.FormFriends.resources
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.FormLogin.resources

@@ -37,6 +37,15 @@ namespace CaseOpener
             return _users[id];
         }
 
+        public User getUser(string name)
+        {
+            var available = _users.FindAll(u => u.Name == name);
+            if (available.Count != 1)
+                return null;
+
+            return available[0];
+        }
+
         // id of sender
         public bool addFriend(int id, string name)
         {

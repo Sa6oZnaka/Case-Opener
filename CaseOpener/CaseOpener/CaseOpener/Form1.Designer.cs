@@ -29,7 +29,7 @@ namespace CaseOpener
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,16 +46,16 @@ namespace CaseOpener
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Location = new System.Drawing.Point(5, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Loged in as:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelName.AutoSize = true;
+            this.labelName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelName.Location = new System.Drawing.Point(5, 5);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(70, 15);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "Loged in as:";
+            this.labelName.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -66,6 +66,7 @@ namespace CaseOpener
             this.button1.TabIndex = 2;
             this.button1.Text = "Log out";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -128,7 +129,7 @@ namespace CaseOpener
             // panel2
             // 
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.labelName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -202,7 +203,7 @@ namespace CaseOpener
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
