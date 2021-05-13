@@ -37,7 +37,7 @@ namespace CaseOpener
             this.buttonFriends = new System.Windows.Forms.Button();
             this.buttonTradeup = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelBalance = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.listBoxItems = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -129,7 +129,7 @@ namespace CaseOpener
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelBalance);
             this.panel2.Controls.Add(this.labelName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -138,15 +138,15 @@ namespace CaseOpener
             this.panel2.Size = new System.Drawing.Size(800, 22);
             this.panel2.TabIndex = 6;
             // 
-            // label3
+            // labelBalance
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Location = new System.Drawing.Point(744, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Balance:";
+            this.labelBalance.AutoSize = true;
+            this.labelBalance.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelBalance.Location = new System.Drawing.Point(744, 5);
+            this.labelBalance.Name = "labelBalance";
+            this.labelBalance.Size = new System.Drawing.Size(51, 15);
+            this.labelBalance.TabIndex = 1;
+            this.labelBalance.Text = "Balance:";
             // 
             // panel3
             // 
@@ -212,7 +212,7 @@ namespace CaseOpener
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelBalance;
         private System.Windows.Forms.ListBox listBoxItems;
         private System.Windows.Forms.Button buttonTradeup;
         private System.Windows.Forms.Button buttonFriends;

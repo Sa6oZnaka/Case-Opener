@@ -22,8 +22,6 @@ namespace CaseOpener
             
 
             InitializeComponent();
-
-            login();
         }
 
         private void ItemChange()
@@ -34,12 +32,10 @@ namespace CaseOpener
         private void RefreshListBoxItems()
         {
             listBoxItems.Items.Clear();
-            //listBoxItems.Items.AddRange(_phoneBook.Find(textBoxNameSearch.Text));
             listBoxItems.Items.AddRange(_game.getUserItems(_userID).ToArray());
 
             listBoxItems.DrawMode = DrawMode.OwnerDrawVariable;
             listBoxItems.DrawItem += new DrawItemEventHandler(listBoxItems_DrawItem);
-
         }
 
         void listBoxItems_DrawItem(object sender, DrawItemEventArgs e)
@@ -77,9 +73,16 @@ namespace CaseOpener
 
         private void button2_Click(object sender, EventArgs e)
         {
-            _game.addItem(_userID, ItemFactory.regullarCase);
-
-            RefreshListBoxItems();
+            if (_game.removeBalance(_userID, 2.5))
+            {
+                _game.addItem(_userID, ItemFactory.regullarCase);
+                labelBalance.Text = "Balance: " + _game.getUser(_userID).Balance;
+                RefreshListBoxItems();
+            }
+            else
+            {
+                MessageBox.Show("Insufficient funds! You need 2.50 to buy a case");
+            }
         }
         private void listBoxItems_DoubleClick(object sender, EventArgs err)
         {
@@ -236,11 +239,7 @@ namespace CaseOpener
         {
             _userID = user.UserID;
             labelName.Text += user.Name;
-        }
-
-        private void login()
-        {
-            //while (!displayLoginForm());
+            labelBalance.Text += user.Balance;
         }
 
         private void button1_Click(object sender, EventArgs e)

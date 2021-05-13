@@ -87,6 +87,16 @@ namespace CaseOpener
             //    addItem(userID, Listing.Item);
         }
 
+        public bool removeBalance(int userID, double amount)
+        {
+            if(_users[userID].Balance >= amount)
+            {
+                _users[userID].Balance -= amount;
+                return true;
+            }
+            return false;
+        }
+
         public void addUser(string name)
         {
             _users.Add(new User(_users.Count, name));
