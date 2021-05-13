@@ -10,18 +10,7 @@ namespace CaseOpener
 {
     public partial class FormLogin : Form
     {
-
-        public string Name 
-        {
-            get
-            {
-                return textBoxName.Text;
-            }
-            set
-            {
-
-            }
-        }
+        private Form1 form = new Form1();
 
         public FormLogin()
         {
@@ -31,6 +20,37 @@ namespace CaseOpener
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Logout()
+        {
+            form = new Form1();
+            this.Show();
+        }
+
+        private void ShowForm()
+        {
+            this.Hide();
+            if (form.ShowDialog() == DialogResult.Abort)
+            {
+                Logout();
+            }
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            if (form.TryLogin(textBoxName.Text))
+            {
+                ShowForm();
+            }
+        }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            if (form.TryRegister(textBoxName.Text))
+            {
+                ShowForm();
+            }
         }
     }
 }

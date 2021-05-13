@@ -197,15 +197,10 @@ namespace CaseOpener
 
         }
 
-        private bool displayLoginForm()
+        public bool TryLogin(string username)
         {
-            var fp = new FormLogin();
-            //fp.Friends = _game.getUser(_userID).Friends;
-
-            var dialogResult = fp.ShowDialog();
-            if (dialogResult == DialogResult.OK)
-            {
-                User user = _game.getUser(fp.Name);
+       
+                User user = _game.getUser(username);
                 if (user == null)
                 {
                     MessageBox.Show("User not found!");
@@ -213,28 +208,29 @@ namespace CaseOpener
                 }
                 else
                 {
-                    getUserDetails(user);
+                    this.getUserDetails(user);
                     return true;
                 }
+        }
+
+        public bool TryRegister(string username)
+        {
+
+            User user = _game.getUser(username);
+            if (user == null)
+            {
+                _game.addUser(username);
+                getUserDetails(_game.getUser(username));
+                return true;
             }
             else
             {
-                // check if user exists
-                User user = _game.getUser(fp.Name);
-                if (user == null)
-                {
-                    _game.addUser(fp.Name);
-                    getUserDetails(_game.getUser(fp.Name));
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("User already exist!");
-                    return false;
-                }
+                MessageBox.Show("User already exist!");
+                return false;
             }
-            
+
         }
+
 
         private void getUserDetails(User user)
         {
@@ -244,15 +240,12 @@ namespace CaseOpener
 
         private void login()
         {
-            while (!displayLoginForm());
+            //while (!displayLoginForm());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // todo fix
-            InitializeComponent();
-
-            login();
+            
         }
     }
 }

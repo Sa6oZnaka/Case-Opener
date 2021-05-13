@@ -59,6 +59,7 @@ namespace CaseOpener
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Abort;
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.Location = new System.Drawing.Point(720, 5);
             this.button1.Name = "button1";
