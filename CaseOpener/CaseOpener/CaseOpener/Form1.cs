@@ -246,5 +246,10 @@ namespace CaseOpener
         {
             
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            button1.PerformClick();
+        }
     }
 }
