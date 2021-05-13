@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CaseOpener 
 {
+    [Serializable]
     class GameItem : Item
     {
 

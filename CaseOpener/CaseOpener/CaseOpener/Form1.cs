@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,14 +16,21 @@ namespace CaseOpener
     {
 
         private Game _game = new Game();
-        private int _userID = 0;
+        private int _userID;
 
         public Form1()
         {
-            _game.addUser("test");
-            
-
             InitializeComponent();
+
+            if (!File.Exists("data"))
+            {
+                return;
+            }
+            var formatter = new BinaryFormatter();
+            using (var stream = new FileStream("data", FileMode.Open))
+            {
+                _game = (Game)formatter.Deserialize(stream);
+            }
         }
 
         private void ItemChange()
@@ -192,7 +201,7 @@ namespace CaseOpener
         {
             var fp = new FormFriends();
             fp.Friends = _game.getUser(_userID).Friends;
-            if(fp.ShowDialog() == DialogResult.OK)
+            if (fp.ShowDialog() == DialogResult.OK)
             {
                 if(! _game.addFriend(_userID, fp.requestName))
                     MessageBox.Show("User not found!");
@@ -212,6 +221,7 @@ namespace CaseOpener
                 else
                 {
                     this.getUserDetails(user);
+                    RefreshListBoxItems();
                     return true;
                 }
         }
@@ -250,6 +260,20 @@ namespace CaseOpener
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             button1.PerformClick();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var formatter = new BinaryFormatter();
+
+            using (var stream = new FileStream("data", FileMode.Create))
+            {
+                formatter.Serialize(stream, _game);
+            }
         }
     }
 }

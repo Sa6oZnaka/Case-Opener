@@ -56,12 +56,10 @@ namespace CaseOpener
         private void showFriends(bool acceptedOnly)
         {
             listBoxFriends.Items.Clear();
+            listBoxFriends.Items.Add("-----");
             foreach (var request in _friends)
             {
-                if (acceptedOnly && request.getStatus() == 1)
-                    listBoxFriends.Items.Add(request);
-                else if (! acceptedOnly && request.getStatus() == 0 && request.getSender() != _userID)
-                    listBoxFriends.Items.Add(request);
+                listBoxFriends.Items.Add(request);
 
             }
         }

@@ -6,10 +6,9 @@ using System.Text;
 
 namespace CaseOpener
 {
+    [Serializable]
     class Case : Item
     {
-
-        private Random _random = new Random();
 
         private List<GameItem> _items;
 
@@ -20,6 +19,8 @@ namespace CaseOpener
 
         public GameItem open()
         {
+            Random random = new Random();
+
             int maxQuality = (int)_items.OrderByDescending(t => t.Rarity).First().Rarity;
             int minQuality = (int)_items.OrderBy(t => t.Rarity).First().Rarity;
             int range = maxQuality - minQuality;
@@ -45,7 +46,7 @@ namespace CaseOpener
 
             List<GameItem> availableOptions = _items.FindAll(i => (int)i.Rarity == quality);
 
-            int itemId = _random.Next(0, availableOptions.Count);
+            int itemId = random.Next(0, availableOptions.Count);
             GameItem item = new GameItem(availableOptions[itemId]);
 
             return item;

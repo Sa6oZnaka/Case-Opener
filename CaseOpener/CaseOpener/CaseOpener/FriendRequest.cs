@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CaseOpener
 {
+    [Serializable]
     public class FriendRequest
     {
 

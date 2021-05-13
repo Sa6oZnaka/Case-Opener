@@ -5,6 +5,8 @@ using System.Text;
 
 namespace CaseOpener
 {
+ 
+    [Serializable]
     class Game
     {
 
@@ -59,6 +61,7 @@ namespace CaseOpener
 
             string senderName = _users[id].Name;
             _users[receaverID].Friends.Add(new FriendRequest(id, receaverID, senderName));
+           
             return true;
         }
 
