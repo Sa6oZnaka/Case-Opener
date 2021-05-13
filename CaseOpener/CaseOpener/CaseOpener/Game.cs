@@ -23,6 +23,17 @@ namespace CaseOpener
             _listings = new List<Listing>();
         }
 
+        public List<User> Users {
+            get
+            {
+                return _users;
+            }
+            set
+            {
+                _users = value;
+            }
+        }
+
         public List<Listing> Listings {
             get
             {

@@ -5,7 +5,7 @@ using System.Text;
 namespace CaseOpener
 {
     [Serializable]
-    class User
+    public class User
     {
 
         private string _name;

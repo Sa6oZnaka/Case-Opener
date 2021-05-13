@@ -201,6 +201,7 @@ namespace CaseOpener
         {
             var fp = new FormFriends();
             fp.Friends = _game.getUser(_userID).Friends;
+            fp.Users = _game.Users;
             if (fp.ShowDialog() == DialogResult.OK)
             {
                 if(! _game.addFriend(_userID, fp.requestName))

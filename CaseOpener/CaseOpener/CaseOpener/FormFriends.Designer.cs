@@ -47,6 +47,7 @@ namespace CaseOpener
             this.listBoxFriends.Name = "listBoxFriends";
             this.listBoxFriends.Size = new System.Drawing.Size(788, 408);
             this.listBoxFriends.TabIndex = 0;
+            this.listBoxFriends.DoubleClick += new System.EventHandler(this.listBoxFriends_DoubleClick);
             // 
             // buttonPending
             // 
@@ -89,7 +90,6 @@ namespace CaseOpener
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // panel1
             // 

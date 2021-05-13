@@ -6,7 +6,7 @@ using System.Text;
 namespace CaseOpener
 {
     [Serializable]
-    abstract class Item
+    public abstract class Item
     {
 
         private int _id;

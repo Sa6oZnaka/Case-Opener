@@ -12,7 +12,20 @@ namespace CaseOpener
     {
 
         private List<FriendRequest> _friends;
+        private List<User> _users;
         private int _userID;
+
+        public List<User> Users 
+        {
+            get
+            {
+                return _users;
+            }
+            set
+            {
+                _users = value;
+            } 
+        }
 
         public int UserID {
             get
@@ -56,10 +69,12 @@ namespace CaseOpener
         private void showFriends(bool acceptedOnly)
         {
             listBoxFriends.Items.Clear();
-            listBoxFriends.Items.Add("-----");
             foreach (var request in _friends)
             {
-                listBoxFriends.Items.Add(request);
+                if (acceptedOnly && request.getStatus() == 1)
+                    listBoxFriends.Items.Add(request);
+                else if (!acceptedOnly && request.getStatus() == 0 && request.getSender() != _userID)
+                    listBoxFriends.Items.Add(request);
 
             }
         }
@@ -74,13 +89,46 @@ namespace CaseOpener
             showFriends(false);
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void listBoxFriends_DoubleClick(object sender, EventArgs e)
         {
-            
-        }
+            if (listBoxFriends.SelectedItem == null)
+            {
+                return;
+            }
 
-        private void buttonSent_Click(object sender, EventArgs e)
-        {
+            FriendRequest fr = (FriendRequest)listBoxFriends.SelectedItem;
+            if (fr.getStatus() == 0)
+            {
+                if (MessageBox.Show(
+                        "Do you want to accept?",
+                        "Confirm accept",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    MessageBox.Show("Accepted!");
+                    fr.accept();
+
+                    // Add friend to the sender
+                    FriendRequest senderRequest = new FriendRequest(
+                            fr.getReceaver(),
+                            fr.getSender(),
+                            _users[fr.getReceaver()].Name);
+
+                    senderRequest.accept();
+                    _users[fr.getSender()].Friends.Add(senderRequest);
+                }
+                else
+                {
+                    MessageBox.Show("Deleted!");
+                    _friends.Remove(fr);
+                }
+            }
+            else
+            {
+                // Already a friend
+
+
+            }
 
         }
     }
