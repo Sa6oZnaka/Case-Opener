@@ -35,7 +35,7 @@ namespace CaseOpener
         {
             listBoxItems.Items.Clear();
             //listBoxItems.Items.AddRange(_phoneBook.Find(textBoxNameSearch.Text));
-            listBoxItems.Items.AddRange(_game.getUserItems(0).ToArray());
+            listBoxItems.Items.AddRange(_game.getUserItems(_userID).ToArray());
 
             listBoxItems.DrawMode = DrawMode.OwnerDrawVariable;
             listBoxItems.DrawItem += new DrawItemEventHandler(listBoxItems_DrawItem);
@@ -77,11 +77,10 @@ namespace CaseOpener
 
         private void button2_Click(object sender, EventArgs e)
         {
-            _game.addItem(0, ItemFactory.regullarCase);
+            _game.addItem(_userID, ItemFactory.regullarCase);
 
             RefreshListBoxItems();
         }
-
         private void listBoxItems_DoubleClick(object sender, EventArgs err)
         {
 
