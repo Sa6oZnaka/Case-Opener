@@ -127,6 +127,9 @@ namespace CaseOpener
             {
                 // Already a friend
 
+                var fo = new FormOffer(_users[fr.getReceaver()].Inventory, _users[fr.getSender()].Inventory);
+                fo.ShowDialog();
+                
 
             }
 

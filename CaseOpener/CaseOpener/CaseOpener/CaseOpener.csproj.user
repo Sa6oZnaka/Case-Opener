@@ -16,5 +16,8 @@
     <Compile Update="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormOffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
