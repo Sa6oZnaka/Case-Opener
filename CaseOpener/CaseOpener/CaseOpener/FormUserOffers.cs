@@ -34,6 +34,10 @@ namespace CaseOpener
                 return;
 
             // open offer
+            Offer offer = (Offer)listBoxOffers.SelectedItem;
+            var fo = new FormOffer(offer);
+            fo.ShowDialog();
+
 
         }
     }

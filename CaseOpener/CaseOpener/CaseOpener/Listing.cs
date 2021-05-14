@@ -12,7 +12,6 @@ namespace CaseOpener
         private int _userID;
         private Item _item;
         private double _price;
-
         public int ID
         {
             get
@@ -35,7 +34,9 @@ namespace CaseOpener
             {
                 return _userID;
             }
-            set { }
+            set {
+                _userID = value;
+            }
         }
 
         public Item Item

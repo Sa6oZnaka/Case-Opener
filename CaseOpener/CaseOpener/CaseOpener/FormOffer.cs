@@ -13,6 +13,7 @@ namespace CaseOpener
 
         private List<Item> _sendItems;
         private List<Item> _receavedItems;
+        
         public List<Item> Send
         {
             get
@@ -42,6 +43,19 @@ namespace CaseOpener
 
             _sendItems = send;
             _receavedItems = receave;
+
+            display();
+        }
+
+        public FormOffer(Offer offer)
+        {
+            InitializeComponent();
+
+            _sendItems = offer.Send;
+            _receavedItems = offer.Receave;
+
+            buttonSendOffer.Text = "Accept Offer";
+            buttonRemoveFriend.Text = "Decline Offer";
 
             display();
         }

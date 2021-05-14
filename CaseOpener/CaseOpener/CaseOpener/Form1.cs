@@ -155,17 +155,14 @@ namespace CaseOpener
         private void button3_Click(object sender, EventArgs e)
         {
             var fp = new FormMarket();
-            fp.Listings = _game.Listings;
+            fp.Users = _game.Users;
             fp.User = _game.getUser(_userID);
+            fp.Listings = _game.Listings;
             var result = fp.ShowDialog();
+            // refresh after form is closed
             if (result == DialogResult.OK)
             {
-                // BUY BUTTON
-                if(fp.removeSelected() != null)
-                    _game.removeListing(fp.removeSelected());
-                else
-                    MessageBox.Show("Please select at least 1 item!");
-
+                RefreshListBoxItems();
             }
         }
 

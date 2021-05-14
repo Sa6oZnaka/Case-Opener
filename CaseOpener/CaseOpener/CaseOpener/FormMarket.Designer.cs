@@ -142,6 +142,7 @@ namespace CaseOpener
             this.Controls.Add(this.label1);
             this.Name = "FormMarket";
             this.Text = "FormMarket";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMarket_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

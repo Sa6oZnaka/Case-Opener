@@ -12,6 +12,20 @@ namespace CaseOpener
     {
         private List<Listing> _availableListings = new List<Listing>();
         private User _user = null;
+        private List<User> _users = new List<User>();
+
+
+        public List<User> Users 
+        {
+            get
+            {
+                return _users;
+            }
+            set
+            {
+                _users = value;
+            }
+        }
 
         public List<Listing> Listings {
             get
@@ -54,20 +68,19 @@ namespace CaseOpener
                 listView1.Items.Add(new ListViewItem(
                     new string[] {
                         _availableListings[i].ID.ToString(),
-                        _availableListings[i].Item.Name, 
+                        _availableListings[i].Item.Name,
                         "Rarity",
-                        "kat novo" , 
-                        "bai mincho", 
+                        "Wear" ,
+                        _users[_availableListings[i].UserID].Name,
                         _availableListings[i].Price.ToString() 
                     }));
             }
         }
-
-        public Listing removeSelected()
+        public bool removeSelected()
         {
             // TODO 
             if (listView1.SelectedItems.Count == 0)
-                return null;
+                return false;
 
             
             ListViewItem selected = listView1.SelectedItems[0];
@@ -76,13 +89,31 @@ namespace CaseOpener
 
             Listing l = _availableListings.FindAll(l => l.ID == id)[0];
 
-            _user.addItem(l.Item);
+            // remove own listing
+            if(_user.UserID == l.UserID)
+            {
+                _user.addItem(l.Item);
+                _availableListings.Remove(l);
+                refreshListings();
+                return true;
+            }
 
-            _availableListings.Remove(l);
+            if (_user.Balance >= l.Price)
+            {
+                // add to other user balance
 
-            refreshListings();
+                _user.Balance -= l.Price;
+                _users[l.UserID].Balance += l.Price;
 
-            return null;
+                _user.addItem(l.Item);
+
+                _availableListings.Remove(l);
+
+                refreshListings();
+                return true;
+            }
+
+            return false;
         }
 
 
@@ -100,6 +131,11 @@ namespace CaseOpener
         private void buttonBuy_Click(object sender, EventArgs e)
         {
             removeSelected();
+        }
+
+        private void FormMarket_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
