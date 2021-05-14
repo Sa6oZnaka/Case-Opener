@@ -19,5 +19,8 @@
     <Compile Update="FormOffer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormUserOffers.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

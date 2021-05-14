@@ -56,6 +56,7 @@ namespace CaseOpener
             // 
             // buttonRemoveFriend
             // 
+            this.buttonRemoveFriend.DialogResult = System.Windows.Forms.DialogResult.No;
             this.buttonRemoveFriend.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonRemoveFriend.Location = new System.Drawing.Point(646, 4);
             this.buttonRemoveFriend.Name = "buttonRemoveFriend";
@@ -66,6 +67,7 @@ namespace CaseOpener
             // 
             // buttonSendOffer
             // 
+            this.buttonSendOffer.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.buttonSendOffer.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonSendOffer.Location = new System.Drawing.Point(721, 4);
             this.buttonSendOffer.Name = "buttonSendOffer";

@@ -58,5 +58,26 @@ namespace CaseOpener
             }
         }
 
+        public List<Item> getSend()
+        {
+            List<Item> result = new List<Item>();
+            if (listBoxReceave.Items.Count > 0)
+                foreach (Item item in listBoxSend.Items)
+                    result.Add(item);
+
+            return result;
+        }
+
+        public List<Item> getReceave()
+        {
+            List<Item> result = new List<Item>();
+            if(listBoxReceave.Items.Count > 0)
+                foreach (Item item in listBoxReceave.Items)
+                    result.Add(item);
+
+            return result;
+        }
+
+
     }
 }

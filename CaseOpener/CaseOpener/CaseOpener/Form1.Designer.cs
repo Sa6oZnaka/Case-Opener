@@ -34,6 +34,7 @@ namespace CaseOpener
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonOffers = new System.Windows.Forms.Button();
             this.buttonFriends = new System.Windows.Forms.Button();
             this.buttonTradeup = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -93,6 +94,7 @@ namespace CaseOpener
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonOffers);
             this.panel1.Controls.Add(this.buttonFriends);
             this.panel1.Controls.Add(this.buttonTradeup);
             this.panel1.Controls.Add(this.button3);
@@ -104,6 +106,17 @@ namespace CaseOpener
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(800, 46);
             this.panel1.TabIndex = 5;
+            // 
+            // buttonOffers
+            // 
+            this.buttonOffers.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonOffers.Location = new System.Drawing.Point(305, 5);
+            this.buttonOffers.Name = "buttonOffers";
+            this.buttonOffers.Size = new System.Drawing.Size(75, 36);
+            this.buttonOffers.TabIndex = 7;
+            this.buttonOffers.Text = "Offers";
+            this.buttonOffers.UseVisualStyleBackColor = true;
+            this.buttonOffers.Click += new System.EventHandler(this.buttonOffers_Click);
             // 
             // buttonFriends
             // 
@@ -221,6 +234,7 @@ namespace CaseOpener
         private System.Windows.Forms.ListBox listBoxItems;
         private System.Windows.Forms.Button buttonTradeup;
         private System.Windows.Forms.Button buttonFriends;
+        private System.Windows.Forms.Button buttonOffers;
     }
 }
 

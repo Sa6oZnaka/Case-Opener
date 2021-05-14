@@ -276,5 +276,13 @@ namespace CaseOpener
                 formatter.Serialize(stream, _game);
             }
         }
+
+        private void buttonOffers_Click(object sender, EventArgs e)
+        {
+            // open offers
+            var fo = new FormUserOffers(_game.getUser(_userID).Offers);
+            fo.Show();
+
+        }
     }
 }

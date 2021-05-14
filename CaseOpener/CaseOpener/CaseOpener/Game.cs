@@ -11,7 +11,6 @@ namespace CaseOpener
     {
 
         private List<User> _users;
-        private List<Offer> _tradeOffers;
         private List<Listing> _listings;
         private int _listingID;
 
@@ -19,7 +18,6 @@ namespace CaseOpener
         {
             _listingID = 0;
             _users = new List<User>();
-            _tradeOffers = new List<Offer>();
             _listings = new List<Listing>();
         }
 
@@ -140,7 +138,7 @@ namespace CaseOpener
             return _users[id].Inventory;
         }
 
-        public List<Offer> getOffers(int userID)
+        /*public List<Offer> getOffers(int userID)
         {
             return (List<Offer>)_tradeOffers.Select(t => t.ReceaverID == userID);
         }
@@ -153,14 +151,14 @@ namespace CaseOpener
         public bool removeOffer(Offer offer)
         {
             return _tradeOffers.Remove(offer);
-        }
+        }*/
 
-        public void addOffer(int sender, int receaver, List<Item> toSend, List<Item> toReceave)
-        {
-            _tradeOffers.Add(new Offer(sender, receaver, toSend, toReceave));
-        }
+        //public void addOffer(int sender, int receaver, List<Item> toSend, List<Item> toReceave)
+        //{
+        //    _tradeOffers.Add(new Offer(sender, receaver, toSend, toReceave));
+        //}
 
-        public void acceptOffer(Offer offer)
+        /*public void acceptOffer(Offer offer)
         {
             User sender = (User)_users.Select(u => u.UserID = offer.SenderID);
             User receaver = (User)_users.Select(u => u.UserID = offer.ReceaverID);
@@ -174,7 +172,7 @@ namespace CaseOpener
                     sender.addItem(offer.Receave[i]);
 
             _tradeOffers.Remove(offer);
-        }
+        }*/
 
         public void compleateTradeup(int userID, TradeUp tradeup)
         {

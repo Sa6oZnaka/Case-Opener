@@ -13,6 +13,20 @@ namespace CaseOpener
         private double _balance;
         private List<Item> _inventory;
         private List<FriendRequest> _friendList; // contains user Ids 
+        private List<Offer> _tradeOffers;
+
+        public List<Offer> Offers
+        {
+            get
+            {
+                return _tradeOffers;
+            }
+            set
+            {
+                _tradeOffers = value;
+            }
+        }
+
 
         public List<FriendRequest> Friends {
             get
@@ -74,6 +88,7 @@ namespace CaseOpener
             _balance = 50; // For testing!!!
             _inventory = new List<Item>();
             _friendList = new List<FriendRequest>();
+            _tradeOffers = new List<Offer>();
         }
 
         public double addBalance(float amount)

@@ -126,11 +126,32 @@ namespace CaseOpener
             else
             {
                 // Already a friend
+                User receaver = _users[fr.getReceaver()];
 
-                var fo = new FormOffer(_users[fr.getReceaver()].Inventory, _users[fr.getSender()].Inventory);
-                fo.ShowDialog();
-                
 
+                var fo = new FormOffer(receaver.Inventory, _users[fr.getSender()].Inventory);
+                var result = fo.ShowDialog();
+                if(result == DialogResult.Yes)
+                {
+                    // send trade offer
+                    List<Item> tmp = new List<Item>();
+
+
+                    receaver.Offers.Add(
+                        new Offer(
+                            fr.getSender(), 
+                            fr.getReceaver(), 
+                            fo.getSend(), 
+                            fo.getReceave()));
+
+
+
+                }
+                else if (result == DialogResult.No)
+                {
+                    // remove friend
+
+                }
             }
 
         }

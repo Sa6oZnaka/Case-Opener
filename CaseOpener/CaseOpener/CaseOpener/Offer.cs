@@ -5,7 +5,7 @@ using System.Text;
 namespace CaseOpener
 {
     [Serializable]
-    class Offer
+    public class Offer
     {
 
         List<Item> _send;
@@ -68,6 +68,10 @@ namespace CaseOpener
 
             _send = send;
             _receave = receave;
+        }
+        public override string ToString()
+        {
+            return "Offer";
         }
 
     }
