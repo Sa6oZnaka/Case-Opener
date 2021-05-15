@@ -149,7 +149,7 @@ namespace CaseOpener
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormOffer";
-            this.Text = "FormOffer";
+            this.Text = "Offer";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

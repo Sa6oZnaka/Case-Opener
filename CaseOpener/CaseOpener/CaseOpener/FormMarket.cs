@@ -63,6 +63,8 @@ namespace CaseOpener
         {
             listView1.Items.Clear();
 
+            _availableListings.Sort((a, b) => a.Price.CompareTo(b.Price));
+
             for(int i = 0; i < _availableListings.Count; i ++)
             {
                 if (_availableListings[i].Item.Name.StartsWith(textBoxSearch.Text))

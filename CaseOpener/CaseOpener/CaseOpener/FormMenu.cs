@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace CaseOpener
 {
-    public partial class Form1 : Form
+    public partial class FormMenu : Form
     {
 
         private Game _game = new Game();
         private int _userID;
 
-        public Form1()
+        public FormMenu()
         {
             InitializeComponent();
 

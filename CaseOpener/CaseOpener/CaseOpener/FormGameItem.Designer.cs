@@ -35,7 +35,6 @@ namespace CaseOpener
             this.buttonSell = new System.Windows.Forms.Button();
             this.labelWear = new System.Windows.Forms.Label();
             this.labelQuality = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -101,15 +100,6 @@ namespace CaseOpener
             this.labelQuality.TabIndex = 2;
             this.labelQuality.Text = "Quality:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(223, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
-            // 
             // labelName
             // 
             this.labelName.AutoSize = true;
@@ -126,7 +116,6 @@ namespace CaseOpener
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 384);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.labelQuality);
             this.Controls.Add(this.labelWear);
             this.Controls.Add(this.panel1);
@@ -147,7 +136,6 @@ namespace CaseOpener
         private System.Windows.Forms.Button buttonSell;
         private System.Windows.Forms.Label labelWear;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelQuality;
     }

@@ -1,5 +1,4 @@
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csprojAssemblyReference.cache
-C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.Form1.resources
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csproj.GenerateResource.cache
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.AssemblyInfoInputs.cache
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.AssemblyInfo.cs
@@ -20,3 +19,4 @@ C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netc
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.FormLogin.resources
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.FormOffer.resources
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.FormUserOffers.resources
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.FormMenu.resources

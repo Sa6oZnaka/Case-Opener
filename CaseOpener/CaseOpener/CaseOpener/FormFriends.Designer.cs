@@ -113,7 +113,7 @@ namespace CaseOpener
             this.Controls.Add(this.panel1);
             this.Name = "FormFriends";
             this.Padding = new System.Windows.Forms.Padding(6);
-            this.Text = "FormFriends";
+            this.Text = "Friends";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

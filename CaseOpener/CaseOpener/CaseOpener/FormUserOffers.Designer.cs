@@ -51,7 +51,7 @@ namespace CaseOpener
             this.Controls.Add(this.listBoxOffers);
             this.Name = "FormUserOffers";
             this.Padding = new System.Windows.Forms.Padding(7);
-            this.Text = "FormUserOffers";
+            this.Text = "Offers";
             this.ResumeLayout(false);
 
         }

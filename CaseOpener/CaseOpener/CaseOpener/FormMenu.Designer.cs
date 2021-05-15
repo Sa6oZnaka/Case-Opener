@@ -1,7 +1,7 @@
 ﻿
 namespace CaseOpener
 {
-    partial class Form1
+    partial class FormMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -207,7 +207,7 @@ namespace CaseOpener
             this.label2.TabIndex = 0;
             this.label2.Text = "Items";
             // 
-            // Form1
+            // FormMenu
             // 
             this.AcceptButton = this.button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -217,8 +217,8 @@ namespace CaseOpener
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormMenu";
+            this.Text = "Main Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);

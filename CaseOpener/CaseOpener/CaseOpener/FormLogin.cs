@@ -10,7 +10,7 @@ namespace CaseOpener
 {
     public partial class FormLogin : Form
     {
-        private Form1 form = new Form1();
+        private FormMenu form = new FormMenu();
 
         public FormLogin()
         {
@@ -24,7 +24,7 @@ namespace CaseOpener
 
         private void Logout()
         {
-            form = new Form1();
+            form = new FormMenu();
             this.Show();
         }
 
