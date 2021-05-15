@@ -139,12 +139,10 @@ namespace CaseOpener
 
                     receaver.Offers.Add(
                         new Offer(
-                            fr.getSender(), 
                             fr.getReceaver(), 
+                            fr.getSender(), 
                             fo.getSend(), 
                             fo.getReceave()));
-
-
 
                 }
                 else if (result == DialogResult.No)

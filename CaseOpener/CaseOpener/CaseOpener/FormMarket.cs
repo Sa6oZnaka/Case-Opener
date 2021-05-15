@@ -65,15 +65,20 @@ namespace CaseOpener
 
             for(int i = 0; i < _availableListings.Count; i ++)
             {
-                listView1.Items.Add(new ListViewItem(
-                    new string[] {
-                        _availableListings[i].ID.ToString(),
-                        _availableListings[i].Item.Name,
-                        "Rarity",
-                        "Wear" ,
-                        _users[_availableListings[i].UserID].Name,
-                        _availableListings[i].Price.ToString() 
-                    }));
+                if (_availableListings[i].Item.Name.StartsWith(textBoxSearch.Text))
+                {
+                    GameItem item = (GameItem)_availableListings[i].Item;
+
+                    listView1.Items.Add(new ListViewItem(
+                        new string[] {
+                            _availableListings[i].ID.ToString(),
+                            item.Name,
+                            item.Rarity.ToString(),
+                            item.Wear.ToString(),
+                            _users[_availableListings[i].UserID].Name,
+                            _availableListings[i].Price.ToString()
+                        }));
+                }
             }
         }
         public bool removeSelected()
@@ -136,6 +141,11 @@ namespace CaseOpener
         private void FormMarket_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            refreshListings();
         }
     }
 }

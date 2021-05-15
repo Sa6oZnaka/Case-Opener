@@ -40,6 +40,7 @@ namespace CaseOpener
             this.seller = new System.Windows.Forms.ColumnHeader();
             this.price = new System.Windows.Forms.ColumnHeader();
             this.buttonBuy = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -104,11 +105,13 @@ namespace CaseOpener
             // 
             this.rarity.DisplayIndex = 4;
             this.rarity.Text = "Rarity";
+            this.rarity.Width = 120;
             // 
             // wear
             // 
             this.wear.DisplayIndex = 1;
             this.wear.Text = "Wear";
+            this.wear.Width = 120;
             // 
             // seller
             // 
@@ -130,11 +133,20 @@ namespace CaseOpener
             this.buttonBuy.UseVisualStyleBackColor = true;
             this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(540, 28);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(167, 23);
+            this.textBoxSearch.TabIndex = 6;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
             // FormMarket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonBuy);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label3);
@@ -160,5 +172,6 @@ namespace CaseOpener
         private System.Windows.Forms.ColumnHeader rarity;
         private System.Windows.Forms.Button buttonBuy;
         private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }

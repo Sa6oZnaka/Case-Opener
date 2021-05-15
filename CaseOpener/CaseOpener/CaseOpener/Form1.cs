@@ -165,7 +165,7 @@ namespace CaseOpener
                 RefreshListBoxItems();
             }
         }
-
+    
         private void buttonTradeup_Click(object sender, EventArgs e)
         {
             List<GameItem> selectedItems = new List<GameItem>();

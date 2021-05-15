@@ -76,7 +76,7 @@ namespace CaseOpener
         {
             List<Item> result = new List<Item>();
             if (listBoxReceave.Items.Count > 0)
-                foreach (Item item in listBoxSend.Items)
+                foreach (Item item in listBoxSend.SelectedItems)
                     result.Add(item);
 
             return result;
@@ -86,7 +86,7 @@ namespace CaseOpener
         {
             List<Item> result = new List<Item>();
             if(listBoxReceave.Items.Count > 0)
-                foreach (Item item in listBoxReceave.Items)
+                foreach (Item item in listBoxReceave.SelectedItems)
                     result.Add(item);
 
             return result;
