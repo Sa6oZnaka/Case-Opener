@@ -134,7 +134,7 @@ namespace CaseOpener
 
                 GameItem selectedItem = (GameItem)listBoxItems.SelectedItem;
 
-                var fp = new FormGameItem(selectedItem.Name, selectedItem.Wear.Value);
+                var fp = new FormGameItem(selectedItem);
 
                 if (fp.ShowDialog() == DialogResult.OK)
                 {

@@ -32,11 +32,9 @@ namespace CaseOpener
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonTrade = new System.Windows.Forms.Button();
             this.buttonSell = new System.Windows.Forms.Button();
             this.labelWear = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.labelQuality = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -46,18 +44,17 @@ namespace CaseOpener
             // 
             this.panel1.Controls.Add(this.textBoxPrice);
             this.panel1.Controls.Add(this.buttonDelete);
-            this.panel1.Controls.Add(this.buttonTrade);
             this.panel1.Controls.Add(this.buttonSell);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 424);
+            this.panel1.Location = new System.Drawing.Point(0, 358);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 26);
+            this.panel1.Size = new System.Drawing.Size(531, 26);
             this.panel1.TabIndex = 0;
             // 
             // textBoxPrice
             // 
             this.textBoxPrice.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxPrice.Location = new System.Drawing.Point(555, 0);
+            this.textBoxPrice.Location = new System.Drawing.Point(286, 0);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(170, 23);
             this.textBoxPrice.TabIndex = 3;
@@ -66,7 +63,7 @@ namespace CaseOpener
             // buttonDelete
             // 
             this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonDelete.Location = new System.Drawing.Point(164, 0);
+            this.buttonDelete.Location = new System.Drawing.Point(0, 0);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 26);
             this.buttonDelete.TabIndex = 2;
@@ -74,22 +71,11 @@ namespace CaseOpener
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.button3_Click);
             // 
-            // buttonTrade
-            // 
-            this.buttonTrade.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonTrade.Location = new System.Drawing.Point(0, 0);
-            this.buttonTrade.Name = "buttonTrade";
-            this.buttonTrade.Size = new System.Drawing.Size(164, 26);
-            this.buttonTrade.TabIndex = 1;
-            this.buttonTrade.Text = "Add to tradeup contract";
-            this.buttonTrade.UseVisualStyleBackColor = true;
-            this.buttonTrade.Click += new System.EventHandler(this.button2_Click);
-            // 
             // buttonSell
             // 
             this.buttonSell.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSell.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonSell.Location = new System.Drawing.Point(725, 0);
+            this.buttonSell.Location = new System.Drawing.Point(456, 0);
             this.buttonSell.Name = "buttonSell";
             this.buttonSell.Size = new System.Drawing.Size(75, 26);
             this.buttonSell.TabIndex = 0;
@@ -100,35 +86,25 @@ namespace CaseOpener
             // labelWear
             // 
             this.labelWear.AutoSize = true;
-            this.labelWear.Location = new System.Drawing.Point(12, 40);
+            this.labelWear.Location = new System.Drawing.Point(223, 46);
             this.labelWear.Name = "labelWear";
             this.labelWear.Size = new System.Drawing.Size(37, 15);
             this.labelWear.TabIndex = 1;
             this.labelWear.Text = "Wear:";
             // 
-            // label2
+            // labelQuality
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // listBox1
-            // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(555, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(245, 424);
-            this.listBox1.TabIndex = 3;
+            this.labelQuality.AutoSize = true;
+            this.labelQuality.Location = new System.Drawing.Point(223, 82);
+            this.labelQuality.Name = "labelQuality";
+            this.labelQuality.Size = new System.Drawing.Size(48, 15);
+            this.labelQuality.TabIndex = 2;
+            this.labelQuality.Text = "Quality:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 113);
+            this.label3.Location = new System.Drawing.Point(223, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 4;
@@ -137,7 +113,7 @@ namespace CaseOpener
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(13, 13);
+            this.labelName.Location = new System.Drawing.Point(224, 19);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(42, 15);
             this.labelName.TabIndex = 5;
@@ -148,11 +124,10 @@ namespace CaseOpener
             this.AcceptButton = this.buttonSell;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(531, 384);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelQuality);
             this.Controls.Add(this.labelWear);
             this.Controls.Add(this.panel1);
             this.Name = "FormGameItem";
@@ -169,12 +144,11 @@ namespace CaseOpener
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonTrade;
         private System.Windows.Forms.Button buttonSell;
         private System.Windows.Forms.Label labelWear;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelQuality;
     }
 }
