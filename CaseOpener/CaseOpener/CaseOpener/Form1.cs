@@ -31,6 +31,9 @@ namespace CaseOpener
             {
                 _game = (Game)formatter.Deserialize(stream);
             }
+
+            listBoxItems.DrawMode = DrawMode.OwnerDrawVariable;
+            listBoxItems.DrawItem += new DrawItemEventHandler(listBoxItems_DrawItem);
         }
 
         private void ItemChange()
@@ -43,8 +46,7 @@ namespace CaseOpener
             listBoxItems.Items.Clear();
             listBoxItems.Items.AddRange(_game.getUserItems(_userID).ToArray());
 
-            listBoxItems.DrawMode = DrawMode.OwnerDrawVariable;
-            listBoxItems.DrawItem += new DrawItemEventHandler(listBoxItems_DrawItem);
+            
         }
 
         void listBoxItems_DrawItem(object sender, DrawItemEventArgs e)
