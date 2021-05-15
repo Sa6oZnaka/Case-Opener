@@ -44,8 +44,13 @@ namespace CaseOpener
         private void RefreshListBoxItems()
         {
             listBoxItems.Items.Clear();
-            listBoxItems.Items.AddRange(_game.getUserItems(_userID).ToArray());
+            /*listBoxItems.Items.AddRange(
+                _game.getUserItems(_userID)
+                .ToArray());*/
 
+            foreach (var item in _game.getUserItems(_userID))
+                if(item.Name.StartsWith(textBoxSearch.Text))
+                    listBoxItems.Items.Add(item);
             
         }
 
@@ -282,6 +287,11 @@ namespace CaseOpener
             var fo = new FormUserOffers(_game.getUser(_userID).Offers);
             fo.Show();
 
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            RefreshListBoxItems();
         }
     }
 }
