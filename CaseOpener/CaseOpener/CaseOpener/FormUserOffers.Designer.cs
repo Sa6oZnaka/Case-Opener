@@ -52,6 +52,7 @@ namespace CaseOpener
             this.Name = "FormUserOffers";
             this.Padding = new System.Windows.Forms.Padding(7);
             this.Text = "Offers";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUserOffers_FormClosed);
             this.ResumeLayout(false);
 
         }

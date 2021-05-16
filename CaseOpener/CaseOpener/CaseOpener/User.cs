@@ -85,7 +85,7 @@ namespace CaseOpener
         {
             _name = name;
             _userID = id;
-            _balance = 50; // For testing!!!
+            _balance = 250; // For testing!!!
             _inventory = new List<Item>();
             _friendList = new List<FriendRequest>();
             _tradeOffers = new List<Offer>();

@@ -141,7 +141,7 @@ namespace CaseOpener
                     List<Item> tmp = new List<Item>();
 
                     _users[fr.getSender()].Offers.Add(
-                        new Offer(fr.getReceaver(), fr.getSender(), fo.getSend(), fo.getReceave()));
+                        new Offer(fr.getSender(), fr.getReceaver(), fo.getReceave(), fo.getSend()));
 
                     /*
                     receaver.Offers.Add(

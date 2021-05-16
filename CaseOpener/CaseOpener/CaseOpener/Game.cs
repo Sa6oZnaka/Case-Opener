@@ -74,20 +74,6 @@ namespace CaseOpener
             return true;
         }
 
-        private void acceptFriendRequest(FriendRequest request)
-        {
-            request.accept();
-
-            // ADD FRIEND FOR OTRHER
-            //addFriend(request)
-        }
-
-        private void removeFriendRequest(FriendRequest request)
-        {
-            int senderID = request.getSender();
-            _users[senderID].Friends.Remove(request);
-        }
-
         public bool removeListing(Listing listing)
         {
             return _listings.Remove(listing);

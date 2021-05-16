@@ -57,8 +57,61 @@ namespace CaseOpener
             buttonSendOffer.Text = "Accept Offer";
             buttonRemoveFriend.Text = "Decline Offer";
 
+            listBoxReceave.DrawMode = DrawMode.OwnerDrawVariable;
+            listBoxReceave.DrawItem += new DrawItemEventHandler(listBoxReceave_DrawItem);
+
+            listBoxSend.DrawMode = DrawMode.OwnerDrawVariable;
+            listBoxSend.DrawItem += new DrawItemEventHandler(listBoxSend_DrawItem);
+
             display();
         }
+
+        void listBoxSend_DrawItem(object sender, DrawItemEventArgs e)
+
+        {
+
+            if (e.Index < 0)
+                return;
+
+            e.DrawBackground();
+            e.DrawFocusRectangle();
+
+            Color c = Color.Gray;
+
+            GameItem selectedItem = null;
+            if (listBoxSend.Items[e.Index].GetType().Name == "GameItem")
+            {
+                selectedItem = (GameItem)listBoxSend.Items[e.Index];
+                c = selectedItem.Color;
+            }
+
+            e.Graphics.DrawString(listBoxSend.Items[e.Index].ToString(), new Font(FontFamily.GenericSansSerif, 8, FontStyle.Bold), new SolidBrush(c), e.Bounds);
+
+        }
+
+        void listBoxReceave_DrawItem(object sender, DrawItemEventArgs e)
+
+        {
+
+            if (e.Index < 0)
+                return;
+
+            e.DrawBackground();
+            e.DrawFocusRectangle();
+
+            Color c = Color.Gray;
+
+            GameItem selectedItem = null;
+            if (listBoxReceave.Items[e.Index].GetType().Name == "GameItem")
+            {
+                selectedItem = (GameItem)listBoxReceave.Items[e.Index];
+                c = selectedItem.Color;
+            }
+
+            e.Graphics.DrawString(listBoxReceave.Items[e.Index].ToString(), new Font(FontFamily.GenericSansSerif, 8, FontStyle.Bold), new SolidBrush(c), e.Bounds);
+
+        }
+
 
         private void display()
         {

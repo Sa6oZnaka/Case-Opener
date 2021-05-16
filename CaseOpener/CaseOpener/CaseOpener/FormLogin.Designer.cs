@@ -35,6 +35,7 @@ namespace CaseOpener
             this.panel1 = new System.Windows.Forms.Panel();
             this.Username = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -102,12 +103,24 @@ namespace CaseOpener
             this.panel2.Size = new System.Drawing.Size(788, 41);
             this.panel2.TabIndex = 4;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(148, 157);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(512, 75);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Моля посетете:       https://github.com/Sa6oZnaka/C--Project          за инструкц" +
+    "ии!";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FormLogin
             // 
             this.AcceptButton = this.buttonLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormLogin";
@@ -118,6 +131,7 @@ namespace CaseOpener
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -129,5 +143,6 @@ namespace CaseOpener
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Username;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

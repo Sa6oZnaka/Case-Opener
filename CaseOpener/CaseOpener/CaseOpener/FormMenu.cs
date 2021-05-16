@@ -53,7 +53,6 @@ namespace CaseOpener
                     listBoxItems.Items.Add(item);
             
         }
-
         void listBoxItems_DrawItem(object sender, DrawItemEventArgs e)
 
         {
@@ -285,7 +284,11 @@ namespace CaseOpener
         {
             // open offers
             var fo = new FormUserOffers(_game.getUser(_userID).Offers);
-            fo.Show();
+            fo.Users = _game.Users;
+            if (fo.ShowDialog() == DialogResult.OK)
+            {
+                RefreshListBoxItems();
+            }
 
         }
 
