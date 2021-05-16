@@ -46,6 +46,8 @@ namespace CaseOpener
             set
             {
                 _friends = value;
+
+                showFriends(true);
             }
         }
 
@@ -116,6 +118,8 @@ namespace CaseOpener
 
                     senderRequest.accept();
                     _users[fr.getSender()].Friends.Add(senderRequest);
+
+                    showFriends(false);
                 }
                 else
                 {
@@ -136,13 +140,16 @@ namespace CaseOpener
                     // send trade offer
                     List<Item> tmp = new List<Item>();
 
+                    _users[fr.getSender()].Offers.Add(
+                        new Offer(fr.getReceaver(), fr.getSender(), fo.getSend(), fo.getReceave()));
 
+                    /*
                     receaver.Offers.Add(
                         new Offer(
                             fr.getReceaver(), 
                             fr.getSender(), 
                             fo.getSend(), 
-                            fo.getReceave()));
+                            fo.getReceave()));*/
 
                 }
                 else if (result == DialogResult.No)

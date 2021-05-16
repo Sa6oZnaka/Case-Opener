@@ -135,7 +135,6 @@ namespace CaseOpener
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSell;
         private System.Windows.Forms.Label labelWear;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelQuality;
     }

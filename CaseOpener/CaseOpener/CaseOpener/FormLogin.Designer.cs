@@ -33,6 +33,7 @@ namespace CaseOpener
             this.buttonRegister = new System.Windows.Forms.Button();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Username = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,20 +66,31 @@ namespace CaseOpener
             // textBoxName
             // 
             this.textBoxName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxName.Location = new System.Drawing.Point(0, 0);
+            this.textBoxName.Location = new System.Drawing.Point(60, 0);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(788, 23);
+            this.textBoxName.Size = new System.Drawing.Size(728, 23);
             this.textBoxName.TabIndex = 2;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBoxName);
+            this.panel1.Controls.Add(this.Username);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(788, 100);
+            this.panel1.Size = new System.Drawing.Size(788, 27);
             this.panel1.TabIndex = 3;
+            // 
+            // Username
+            // 
+            this.Username.AutoSize = true;
+            this.Username.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Username.Location = new System.Drawing.Point(0, 0);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(60, 15);
+            this.Username.TabIndex = 5;
+            this.Username.Text = "Username";
             // 
             // panel2
             // 
@@ -116,5 +128,6 @@ namespace CaseOpener
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label Username;
     }
 }
