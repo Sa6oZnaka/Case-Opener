@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "CaseOpener/1.0.0": {
+        "dependencies": {
+          "ClassLibraryUser": "1.0.0"
+        },
         "runtime": {
           "CaseOpener.dll": {}
+        }
+      },
+      "ClassLibraryUser/1.0.0": {
+        "runtime": {
+          "ClassLibraryUser.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CaseOpener/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClassLibraryUser/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

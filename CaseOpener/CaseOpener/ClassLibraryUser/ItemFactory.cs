@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace CaseOpener
+namespace MyFirm.CaseOpener.ClassLibraryUser
 {
 
     //public delegate void GetItemCollection(GameItem item);
 
 
-    static class ItemFactory
+    public static class ItemFactory
     {
 
         private static readonly Random getrandom = new Random();

@@ -1,0 +1,6 @@
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\ClassLibraryUser\bin\Debug\ClassLibraryUser.dll
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\ClassLibraryUser\bin\Debug\ClassLibraryUser.pdb
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\ClassLibraryUser\obj\Debug\ClassLibraryUser.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\ClassLibraryUser\obj\Debug\ClassLibraryUser.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\ClassLibraryUser\obj\Debug\ClassLibraryUser.dll
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\ClassLibraryUser\obj\Debug\ClassLibraryUser.pdb

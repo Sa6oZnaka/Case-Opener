@@ -6,7 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CaseOpener
+using GameItem = MyFirm.CaseOpener.ClassLibraryUser.GameItem;
+using User = MyFirm.CaseOpener.ClassLibraryUser.User;
+using Listing = MyFirm.CaseOpener.ClassLibraryUser.Listing;
+
+namespace MyFirm.CaseOpener
 {
     partial class FormMarket : Form
     {

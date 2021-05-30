@@ -6,7 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CaseOpener
+using User = MyFirm.CaseOpener.ClassLibraryUser.User;
+using FriendRequest = MyFirm.CaseOpener.ClassLibraryUser.FriendRequest;
+using Item = MyFirm.CaseOpener.ClassLibraryUser.Item;
+using Offer = MyFirm.CaseOpener.ClassLibraryUser.Offer;
+
+namespace MyFirm.CaseOpener
 {
     public partial class FormFriends : Form
     {

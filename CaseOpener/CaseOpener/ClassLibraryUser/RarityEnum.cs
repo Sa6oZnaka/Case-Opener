@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CaseOpener
+namespace MyFirm.CaseOpener.ClassLibraryUser
 {
-    class RarityEnum
+    public class RarityEnum
     {
 
         public enum Rarity

@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CaseOpener
+using Offer = MyFirm.CaseOpener.ClassLibraryUser.Offer;
+using User = MyFirm.CaseOpener.ClassLibraryUser.User;
+
+namespace MyFirm.CaseOpener
 {
     public partial class FormUserOffers : Form
     {

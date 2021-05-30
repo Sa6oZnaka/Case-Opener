@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CaseOpener
+namespace MyFirm.CaseOpener.ClassLibraryUser
 {
-    class TradeUp
+    public class TradeUp
     {
         private List<GameItem> _items;
 

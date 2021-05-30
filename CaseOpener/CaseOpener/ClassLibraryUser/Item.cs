@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace CaseOpener
+namespace MyFirm.CaseOpener.ClassLibraryUser
 {
     [Serializable]
     public abstract class Item

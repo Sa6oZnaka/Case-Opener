@@ -9,8 +9,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyFirm.CaseOpener.ClassLibraryUser;
 
-namespace CaseOpener
+using Game = MyFirm.CaseOpener.ClassLibraryUser.Game;
+using GameItem = MyFirm.CaseOpener.ClassLibraryUser.GameItem;
+using Case = MyFirm.CaseOpener.ClassLibraryUser.Case;
+using ItemFactory = MyFirm.CaseOpener.ClassLibraryUser.ItemFactory;
+using User = MyFirm.CaseOpener.ClassLibraryUser.User;
+using TradeUp = MyFirm.CaseOpener.ClassLibraryUser.TradeUp;
+
+namespace MyFirm.CaseOpener
 {
     public partial class FormMenu : Form
     {
@@ -44,10 +52,6 @@ namespace CaseOpener
         private void RefreshListBoxItems()
         {
             listBoxItems.Items.Clear();
-            /*listBoxItems.Items.AddRange(
-                _game.getUserItems(_userID)
-                .ToArray());*/
-
             foreach (var item in _game.getUserItems(_userID))
                 if(item.Name.StartsWith(textBoxSearch.Text))
                     listBoxItems.Items.Add(item);

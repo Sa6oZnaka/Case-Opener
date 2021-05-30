@@ -4,10 +4,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace CaseOpener
+namespace MyFirm.CaseOpener.ClassLibraryUser
 {
     [Serializable]
-    class Case : Item
+    public class Case : Item
     {
 
         private List<GameItem> _items;

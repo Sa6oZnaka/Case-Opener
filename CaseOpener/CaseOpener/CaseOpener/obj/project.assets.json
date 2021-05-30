@@ -1,11 +1,29 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "ClassLibraryUser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/ClassLibraryUser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibraryUser.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ClassLibraryUser/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibraryUser/ClassLibraryUser.csproj",
+      "msbuildProject": "../ClassLibraryUser/ClassLibraryUser.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "ClassLibraryUser >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Alex\\.nuget\\packages\\": {}
@@ -33,7 +51,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\ClassLibraryUser\\ClassLibraryUser.csproj": {
+              "projectPath": "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\ClassLibraryUser\\ClassLibraryUser.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

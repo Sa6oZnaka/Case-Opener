@@ -1,5 +1,5 @@
 ﻿
-namespace CaseOpener
+namespace MyFirm.CaseOpener
 {
     partial class FormMarket
     {

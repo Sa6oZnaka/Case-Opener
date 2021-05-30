@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace CaseOpener 
+namespace MyFirm.CaseOpener.ClassLibraryUser
 {
     [Serializable]
-    class GameItem : Item
+    public class GameItem : Item
     {
 
         private double? _wear;

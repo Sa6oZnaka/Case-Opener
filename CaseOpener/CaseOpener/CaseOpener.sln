@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseOpener", "CaseOpener\CaseOpener.csproj", "{00297E8C-CEBA-491B-993A-B03BC58E7DE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseOpener", "CaseOpener\CaseOpener.csproj", "{00297E8C-CEBA-491B-993A-B03BC58E7DE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryUser", "ClassLibraryUser\ClassLibraryUser.csproj", "{5480667F-2AC2-45FC-A485-99FD5AF7709B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{00297E8C-CEBA-491B-993A-B03BC58E7DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00297E8C-CEBA-491B-993A-B03BC58E7DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00297E8C-CEBA-491B-993A-B03BC58E7DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5480667F-2AC2-45FC-A485-99FD5AF7709B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5480667F-2AC2-45FC-A485-99FD5AF7709B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5480667F-2AC2-45FC-A485-99FD5AF7709B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5480667F-2AC2-45FC-A485-99FD5AF7709B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

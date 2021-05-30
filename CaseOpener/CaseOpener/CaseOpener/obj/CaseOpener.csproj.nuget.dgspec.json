@@ -27,7 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\ClassLibraryUser\\ClassLibraryUser.csproj": {
+                "projectPath": "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\ClassLibraryUser\\ClassLibraryUser.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -59,6 +63,16 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\ClassLibraryUser\\ClassLibraryUser.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\ClassLibraryUser\\ClassLibraryUser.csproj",
+        "projectName": "ClassLibraryUser",
+        "projectPath": "C:\\Users\\Alex\\Desktop\\C--Project\\CaseOpener\\CaseOpener\\ClassLibraryUser\\ClassLibraryUser.csproj"
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }
