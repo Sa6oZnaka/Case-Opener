@@ -52,10 +52,12 @@ namespace MyFirm.CaseOpener
         private void RefreshListBoxItems()
         {
             listBoxItems.Items.Clear();
-            foreach (var item in _game.getUserItems(_userID))
-                if(item.Name.StartsWith(textBoxSearch.Text))
-                    listBoxItems.Items.Add(item);
-            
+            foreach (var item in from item in _game.getUserItems(_userID)
+                                 where item.Name.StartsWith(textBoxSearch.Text)
+                                 select item)
+            {
+                listBoxItems.Items.Add(item);
+            }
         }
         void listBoxItems_DrawItem(object sender, DrawItemEventArgs e)
 
@@ -184,7 +186,9 @@ namespace MyFirm.CaseOpener
                 if(item.GetType().Name == "GameItem")
                     selectedItems.Add((GameItem)item);
             }
-            if(selectedItems.Count == 10)
+
+
+            if (selectedItems.Count == 10)
             {
                 // check if the items are the same rarity
                 int rarity = (int)selectedItems[0].Rarity;

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using GameItem = MyFirm.CaseOpener.ClassLibraryUser.GameItem;
 using Item = MyFirm.CaseOpener.ClassLibraryUser.Item;
 using Offer = MyFirm.CaseOpener.ClassLibraryUser.Offer;
+using System.Linq;
 
 namespace MyFirm.CaseOpener
 {
@@ -133,9 +134,8 @@ namespace MyFirm.CaseOpener
         {
             List<Item> result = new List<Item>();
             if (listBoxReceave.Items.Count > 0)
-                foreach (Item item in listBoxSend.SelectedItems)
-                    result.Add(item);
-
+                result.AddRange(from Item item in listBoxSend.SelectedItems
+                                select item);
             return result;
         }
 
@@ -143,9 +143,8 @@ namespace MyFirm.CaseOpener
         {
             List<Item> result = new List<Item>();
             if(listBoxReceave.Items.Count > 0)
-                foreach (Item item in listBoxReceave.SelectedItems)
-                    result.Add(item);
-
+                result.AddRange(from Item item in listBoxReceave.SelectedItems
+                                select item);
             return result;
         }
 

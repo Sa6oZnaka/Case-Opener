@@ -1,4 +1,3 @@
-C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csprojAssemblyReference.cache
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csproj.GenerateResource.cache
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.AssemblyInfoInputs.cache
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.AssemblyInfo.cs
@@ -23,3 +22,4 @@ C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netc
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netcoreapp3.1\ClassLibraryUser.dll
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\bin\Debug\netcoreapp3.1\ClassLibraryUser.pdb
 C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csproj.CopyComplete
+C:\Users\Alex\Desktop\C--Project\CaseOpener\CaseOpener\CaseOpener\obj\Debug\netcoreapp3.1\CaseOpener.csproj.AssemblyReference.cache

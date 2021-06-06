@@ -10,6 +10,7 @@ using User = MyFirm.CaseOpener.ClassLibraryUser.User;
 using FriendRequest = MyFirm.CaseOpener.ClassLibraryUser.FriendRequest;
 using Item = MyFirm.CaseOpener.ClassLibraryUser.Item;
 using Offer = MyFirm.CaseOpener.ClassLibraryUser.Offer;
+using System.Linq;
 
 namespace MyFirm.CaseOpener
 {
@@ -76,14 +77,17 @@ namespace MyFirm.CaseOpener
         private void showFriends(bool acceptedOnly)
         {
             listBoxFriends.Items.Clear();
-            foreach (var request in _friends)
-            {
-                if (acceptedOnly && request.getStatus() == 1)
-                    listBoxFriends.Items.Add(request);
-                else if (!acceptedOnly && request.getStatus() == 0 && request.getSender() != _userID)
-                    listBoxFriends.Items.Add(request);
+            foreach (var request in from request in _friends
+                                    where acceptedOnly && request.getStatus() == 1
+                                    select request)
+                listBoxFriends.Items.Add(request);
+            
 
-            }
+            foreach (var request in from request in _friends
+                                    where !acceptedOnly && request.getStatus() == 0 && request.getSender() != _userID
+                                    select request)
+          
+                listBoxFriends.Items.Add(request);   
         }
 
         private void button2_Click(object sender, EventArgs e) // button friends

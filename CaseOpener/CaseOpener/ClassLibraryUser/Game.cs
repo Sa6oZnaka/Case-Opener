@@ -79,12 +79,6 @@ namespace MyFirm.CaseOpener.ClassLibraryUser
             return _listings.Remove(listing);
         }
 
-        public void buyListing(int userID, Listing listing)
-        {
-            //if (removeListing(listing))
-            //    addItem(userID, Listing.Item);
-        }
-
         public bool removeBalance(int userID, double amount)
         {
             if(_users[userID].Balance >= amount)

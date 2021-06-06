@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 using Offer = MyFirm.CaseOpener.ClassLibraryUser.Offer;
 using User = MyFirm.CaseOpener.ClassLibraryUser.User;
+using System.Linq;
 
 namespace MyFirm.CaseOpener
 {
@@ -42,6 +43,7 @@ namespace MyFirm.CaseOpener
             {
                 listBoxOffers.Items.Add(offer);
             }
+
         }
 
         private void listBoxOffers_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -55,16 +57,18 @@ namespace MyFirm.CaseOpener
             var result = fo.ShowDialog();
             if(result == DialogResult.Yes)
             {
-                foreach(var item in offer.Send)
-                {
-                    if (_users[offer.SenderID].removeItem(item))
-                        _users[offer.ReceaverID].addItem(item);
-                }
-                foreach (var item in offer.Receave)
-                {
-                    if (_users[offer.ReceaverID].removeItem(item))
-                        _users[offer.SenderID].addItem(item);
-                }
+                foreach (var item in from item in offer.Send
+                                     where _users[offer.SenderID].removeItem(item)
+                                     select item)
+                    _users[offer.ReceaverID].addItem(item);
+                
+
+                foreach (var item in from item in offer.Receave
+                                     where _users[offer.ReceaverID].removeItem(item)
+                                     select item)
+                    _users[offer.SenderID].addItem(item);
+                
+
                 _offers.Remove(offer);
             }
             else // offer declined (Dialogbox.No)

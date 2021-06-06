@@ -69,20 +69,20 @@ namespace MyFirm.CaseOpener
 
             _availableListings.Sort((a, b) => a.Price.CompareTo(b.Price));
 
-            for(int i = 0; i < _availableListings.Count; i ++)
+            foreach(Listing v in _availableListings)
             {
-                if (_availableListings[i].Item.Name.StartsWith(textBoxSearch.Text))
+                if (v.Item.Name.StartsWith(textBoxSearch.Text))
                 {
-                    GameItem item = (GameItem)_availableListings[i].Item;
+                    GameItem item = (GameItem)v.Item;
 
                     listView1.Items.Add(new ListViewItem(
                         new string[] {
-                            _availableListings[i].ID.ToString(),
+                            v.ID.ToString(),
                             item.Name,
                             item.Rarity.ToString(),
                             item.Wear.ToString(),
-                            _users[_availableListings[i].UserID].Name,
-                            _availableListings[i].Price.ToString()
+                            _users[v.UserID].Name,
+                            v.Price.ToString()
                         }));
                 }
             }
